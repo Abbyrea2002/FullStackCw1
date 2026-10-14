@@ -20,6 +20,15 @@ for _, row in merged_df.iterrows():
   if len(movies) >= limit:
     break
   try:
+     production_companies_data = ast.literal_eval(row["production_companies"])
+     production_companies = [
+        {"name": company["name"]}
+        for company in production_companies_data
+     ]
+  except:
+     production_companies = [] 
+
+  try:
      genres = ast.literal_eval(row["genres"])
      genres = [g["name"] for g in genres]
   except:
@@ -34,10 +43,8 @@ for _, row in merged_df.iterrows():
   try:
     cast_data = ast.literal_eval(row["cast"])
     cast = [
-         {
-            "name": actor["name"],
-            "character": actor["character"]
-        }
+         {"name": actor["name"],
+          "character": actor["character"]}
           for actor in cast_data[:5]
         ]
   except:
@@ -49,10 +56,10 @@ for _, row in merged_df.iterrows():
 
      for crew_member in crew_data:
          if crew_member["job"] == "Director":
-            director = {
-                 "name": crew_member["name"]
-             }
-         break
+           director = {
+               "name": crew_member["name"]
+           }
+           break
   except:
         pass
 
@@ -65,12 +72,11 @@ for _, row in merged_df.iterrows():
 
         "overview": row["overview"],
 
-        "release_date": row["release_date"],
-
         "release_year":
             int(str(row["release_date"])[:4])
             if pd.notna(row["release_date"])
             else None,
+        "production_companies": production_companies,
 
         "runtime": row["runtime"],
 
@@ -95,7 +101,12 @@ for _, row in merged_df.iterrows():
             "vote_count": int(row["vote_count"])
         },
 
-        "reviews": []
+        "reviews": [],
+
+        "flags":{
+                   "has_reviews": False,
+                   "is_popular": float(row["popularity"]) >= 100
+        },
     }
 
   movies.append(movie)

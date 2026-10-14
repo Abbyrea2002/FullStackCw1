@@ -3,8 +3,21 @@
         "_id": "m19995",
         "title": "Avatar",
         "overview": "In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization.",
-        "release_date": "2009-12-10",
         "release_year": 2009,
+        "production_companies": [
+            {
+                "name": "Ingenious Film Partners"
+            },
+            {
+                "name": "Twentieth Century Fox Film Corporation"
+            },
+            {
+                "name": "Dune Entertainment"
+            },
+            {
+                "name": "Lightstorm Entertainment"
+            }
+        ],
         "runtime": 162.0,
         "genres": [
             "Action",
@@ -35,7 +48,9 @@
             "mind and soul",
             "3d"
         ],
-        "director": {},
+        "director": {
+            "name": "James Cameron"
+        },
         "cast": [
             {
                 "name": "Sam Worthington",
@@ -65,14 +80,28 @@
             "tmdb_rating": 7.2,
             "vote_count": 11800
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m285",
         "title": "Pirates of the Caribbean: At World's End",
         "overview": "Captain Barbossa, long believed to be dead, has come back to life and is headed to the edge of the Earth with Will Turner and Elizabeth Swann. But nothing is quite as it seems.",
-        "release_date": "2007-05-19",
         "release_year": 2007,
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures"
+            },
+            {
+                "name": "Jerry Bruckheimer Films"
+            },
+            {
+                "name": "Second Mate Productions"
+            }
+        ],
         "runtime": 169.0,
         "genres": [
             "Adventure",
@@ -97,7 +126,9 @@
             "swashbuckler",
             "aftercreditsstinger"
         ],
-        "director": {},
+        "director": {
+            "name": "Gore Verbinski"
+        },
         "cast": [
             {
                 "name": "Johnny Depp",
@@ -127,14 +158,28 @@
             "tmdb_rating": 6.9,
             "vote_count": 4500
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m206647",
         "title": "Spectre",
         "overview": "A cryptic message from Bond’s past sends him on a trail to uncover a sinister organization. While M battles political forces to keep the secret service alive, Bond peels back the layers of deceit to reveal the terrible truth behind SPECTRE.",
-        "release_date": "2015-10-26",
         "release_year": 2015,
+        "production_companies": [
+            {
+                "name": "Columbia Pictures"
+            },
+            {
+                "name": "Danjaq"
+            },
+            {
+                "name": "B24"
+            }
+        ],
         "runtime": 148.0,
         "genres": [
             "Action",
@@ -150,7 +195,9 @@
             "british secret service",
             "united kingdom"
         ],
-        "director": {},
+        "director": {
+            "name": "Sam Mendes"
+        },
         "cast": [
             {
                 "name": "Daniel Craig",
@@ -180,14 +227,31 @@
             "tmdb_rating": 6.3,
             "vote_count": 4466
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m49026",
         "title": "The Dark Knight Rises",
         "overview": "Following the death of District Attorney Harvey Dent, Batman assumes responsibility for Dent's crimes to protect the late attorney's reputation and is subsequently hunted by the Gotham City Police Department. Eight years later, Batman encounters the mysterious Selina Kyle and the villainous Bane, a new terrorist leader who overwhelms Gotham's finest. The Dark Knight resurfaces to protect a city that has branded him an enemy.",
-        "release_date": "2012-07-16",
         "release_year": 2012,
+        "production_companies": [
+            {
+                "name": "Legendary Pictures"
+            },
+            {
+                "name": "Warner Bros."
+            },
+            {
+                "name": "DC Entertainment"
+            },
+            {
+                "name": "Syncopy"
+            }
+        ],
         "runtime": 165.0,
         "genres": [
             "Action",
@@ -218,7 +282,9 @@
             "criminal underworld",
             "batman"
         ],
-        "director": {},
+        "director": {
+            "name": "Christopher Nolan"
+        },
         "cast": [
             {
                 "name": "Christian Bale",
@@ -248,14 +314,22 @@
             "tmdb_rating": 7.6,
             "vote_count": 9106
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m49529",
         "title": "John Carter",
         "overview": "John Carter is a war-weary, former military captain who's inexplicably transported to the mysterious and exotic planet of Barsoom (Mars) and reluctantly becomes embroiled in an epic conflict. It's a world on the brink of collapse, and Carter rediscovers his humanity when he realizes the survival of Barsoom and its people rests in his hands.",
-        "release_date": "2012-03-07",
         "release_year": 2012,
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures"
+            }
+        ],
         "runtime": 132.0,
         "genres": [
             "Action",
@@ -280,7 +354,9 @@
             "19th century",
             "3d"
         ],
-        "director": {},
+        "director": {
+            "name": "Andrew Stanton"
+        },
         "cast": [
             {
                 "name": "Taylor Kitsch",
@@ -310,14 +386,28 @@
             "tmdb_rating": 6.1,
             "vote_count": 2124
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m559",
         "title": "Spider-Man 3",
         "overview": "The seemingly invincible Spider-Man goes up against an all-new crop of villain – including the shape-shifting Sandman. While Spider-Man’s superpowers are altered by an alien organism, his alter ego, Peter Parker, deals with nemesis Eddie Brock and also gets caught up in a love triangle.",
-        "release_date": "2007-05-01",
         "release_year": 2007,
+        "production_companies": [
+            {
+                "name": "Columbia Pictures"
+            },
+            {
+                "name": "Laura Ziskin Productions"
+            },
+            {
+                "name": "Marvel Enterprises"
+            }
+        ],
         "runtime": 139.0,
         "genres": [
             "Fantasy",
@@ -342,7 +432,9 @@
             "superhero",
             "revenge"
         ],
-        "director": {},
+        "director": {
+            "name": "Sam Raimi"
+        },
         "cast": [
             {
                 "name": "Tobey Maguire",
@@ -372,14 +464,25 @@
             "tmdb_rating": 5.9,
             "vote_count": 3576
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m38757",
         "title": "Tangled",
         "overview": "When the kingdom's most wanted-and most charming-bandit Flynn Rider hides out in a mysterious tower, he's taken hostage by Rapunzel, a beautiful and feisty tower-bound teen with 70 feet of magical, golden hair. Flynn's curious captor, who's looking for her ticket out of the tower where she's been locked away for years, strikes a deal with the handsome thief and the unlikely duo sets off on an action-packed escapade, complete with a super-cop horse, an over-protective chameleon and a gruff gang of pub thugs.",
-        "release_date": "2010-11-24",
         "release_year": 2010,
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures"
+            },
+            {
+                "name": "Walt Disney Animation Studios"
+            }
+        ],
         "runtime": 100.0,
         "genres": [
             "Animation",
@@ -402,7 +505,9 @@
             "healing gift",
             "animal sidekick"
         ],
-        "director": {},
+        "director": {
+            "name": "Byron Howard"
+        },
         "cast": [
             {
                 "name": "Zachary Levi",
@@ -432,14 +537,28 @@
             "tmdb_rating": 7.4,
             "vote_count": 3330
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m99861",
         "title": "Avengers: Age of Ultron",
         "overview": "When Tony Stark tries to jumpstart a dormant peacekeeping program, things go awry and Earth’s Mightiest Heroes are put to the ultimate test as the fate of the planet hangs in the balance. As the villainous Ultron emerges, it is up to The Avengers to stop him from enacting his terrible plans, and soon uneasy alliances and unexpected action pave the way for an epic and unique global adventure.",
-        "release_date": "2015-04-22",
         "release_year": 2015,
+        "production_companies": [
+            {
+                "name": "Marvel Studios"
+            },
+            {
+                "name": "Prime Focus"
+            },
+            {
+                "name": "Revolution Sun Studios"
+            }
+        ],
         "runtime": 141.0,
         "genres": [
             "Action",
@@ -457,7 +576,9 @@
             "marvel cinematic universe",
             "3d"
         ],
-        "director": {},
+        "director": {
+            "name": "Joss Whedon"
+        },
         "cast": [
             {
                 "name": "Robert Downey Jr.",
@@ -487,14 +608,25 @@
             "tmdb_rating": 7.3,
             "vote_count": 6767
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m767",
         "title": "Harry Potter and the Half-Blood Prince",
         "overview": "As Harry begins his sixth year at Hogwarts, he discovers an old book marked as 'Property of the Half-Blood Prince', and begins to learn more about Lord Voldemort's dark past.",
-        "release_date": "2009-07-07",
         "release_year": 2009,
+        "production_companies": [
+            {
+                "name": "Warner Bros."
+            },
+            {
+                "name": "Heyday Films"
+            }
+        ],
         "runtime": 153.0,
         "genres": [
             "Adventure",
@@ -511,7 +643,9 @@
             "teenage crush",
             "werewolf"
         ],
-        "director": {},
+        "director": {
+            "name": "David Yates"
+        },
         "cast": [
             {
                 "name": "Daniel Radcliffe",
@@ -541,14 +675,37 @@
             "tmdb_rating": 7.4,
             "vote_count": 5293
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m209112",
         "title": "Batman v Superman: Dawn of Justice",
         "overview": "Fearing the actions of a god-like Super Hero left unchecked, Gotham City’s own formidable, forceful vigilante takes on Metropolis’s most revered, modern-day savior, while the world wrestles with what sort of hero it really needs. And with Batman and Superman at war with one another, a new threat quickly arises, putting mankind in greater danger than it’s ever known before.",
-        "release_date": "2016-03-23",
         "release_year": 2016,
+        "production_companies": [
+            {
+                "name": "DC Comics"
+            },
+            {
+                "name": "Atlas Entertainment"
+            },
+            {
+                "name": "Warner Bros."
+            },
+            {
+                "name": "DC Entertainment"
+            },
+            {
+                "name": "Cruel & Unusual Films"
+            },
+            {
+                "name": "RatPac-Dune Entertainment"
+            }
+        ],
         "runtime": 151.0,
         "genres": [
             "Action",
@@ -566,7 +723,9 @@
             "bruce wayne",
             "dc extended universe"
         ],
-        "director": {},
+        "director": {
+            "name": "Zack Snyder"
+        },
         "cast": [
             {
                 "name": "Ben Affleck",
@@ -596,14 +755,31 @@
             "tmdb_rating": 5.7,
             "vote_count": 7004
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m1452",
         "title": "Superman Returns",
         "overview": "Superman returns to discover his 5-year absence has allowed Lex Luthor to walk free, and that those he was closest too felt abandoned and have moved on. Luthor plots his ultimate revenge that could see millions killed and change the face of the planet forever, as well as ridding himself of the Man of Steel.",
-        "release_date": "2006-06-28",
         "release_year": 2006,
+        "production_companies": [
+            {
+                "name": "DC Comics"
+            },
+            {
+                "name": "Legendary Pictures"
+            },
+            {
+                "name": "Warner Bros."
+            },
+            {
+                "name": "Bad Hat Harry Productions"
+            }
+        ],
         "runtime": 154.0,
         "genres": [
             "Adventure",
@@ -623,7 +799,9 @@
             "superhuman strength",
             "lex luthor"
         ],
-        "director": {},
+        "director": {
+            "name": "Bryan Singer"
+        },
         "cast": [
             {
                 "name": "Brandon Routh",
@@ -653,14 +831,22 @@
             "tmdb_rating": 5.4,
             "vote_count": 1400
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m10764",
         "title": "Quantum of Solace",
         "overview": "Quantum of Solace continues the adventures of James Bond after Casino Royale. Betrayed by Vesper, the woman he loved, 007 fights the urge to make his latest mission personal. Pursuing his determination to uncover the truth, Bond and M interrogate Mr. White, who reveals that the organization that blackmailed Vesper is far more complex and dangerous than anyone had imagined.",
-        "release_date": "2008-10-30",
         "release_year": 2008,
+        "production_companies": [
+            {
+                "name": "Eon Productions"
+            }
+        ],
         "runtime": 106.0,
         "genres": [
             "Adventure",
@@ -674,7 +860,9 @@
             "secret agent",
             "british secret service"
         ],
-        "director": {},
+        "director": {
+            "name": "Marc Forster"
+        },
         "cast": [
             {
                 "name": "Daniel Craig",
@@ -704,14 +892,28 @@
             "tmdb_rating": 6.1,
             "vote_count": 2965
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m58",
         "title": "Pirates of the Caribbean: Dead Man's Chest",
         "overview": "Captain Jack Sparrow works his way out of a blood debt with the ghostly Davey Jones, he also attempts to avoid eternal damnation.",
-        "release_date": "2006-06-20",
         "release_year": 2006,
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures"
+            },
+            {
+                "name": "Jerry Bruckheimer Films"
+            },
+            {
+                "name": "Second Mate Productions"
+            }
+        ],
         "runtime": 151.0,
         "genres": [
             "Adventure",
@@ -734,7 +936,9 @@
             "swashbuckler",
             "aftercreditsstinger"
         ],
-        "director": {},
+        "director": {
+            "name": "Gore Verbinski"
+        },
         "cast": [
             {
                 "name": "Johnny Depp",
@@ -764,14 +968,37 @@
             "tmdb_rating": 7.0,
             "vote_count": 5246
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m57201",
         "title": "The Lone Ranger",
         "overview": "The Texas Rangers chase down a gang of outlaws led by Butch Cavendish, but the gang ambushes the Rangers, seemingly killing them all. One survivor is found, however, by an American Indian named Tonto, who nurses him back to health. The Ranger, donning a mask and riding a white stallion named Silver, teams up with Tonto to bring the unscrupulous gang and others of that ilk to justice.",
-        "release_date": "2013-07-03",
         "release_year": 2013,
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures"
+            },
+            {
+                "name": "Jerry Bruckheimer Films"
+            },
+            {
+                "name": "Infinitum Nihil"
+            },
+            {
+                "name": "Silver Bullet Productions (II)"
+            },
+            {
+                "name": "Blind Wink Productions"
+            },
+            {
+                "name": "Classic Media"
+            }
+        ],
         "runtime": 149.0,
         "genres": [
             "Action",
@@ -825,14 +1052,34 @@
             "tmdb_rating": 5.9,
             "vote_count": 2311
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m49521",
         "title": "Man of Steel",
         "overview": "A young boy learns that he has extraordinary powers and is not of this earth. As a young man, he journeys to discover where he came from and what he was sent here to do. But the hero in him must emerge if he is to save the world from annihilation and become the symbol of hope for all mankind.",
-        "release_date": "2013-06-12",
         "release_year": 2013,
+        "production_companies": [
+            {
+                "name": "Legendary Pictures"
+            },
+            {
+                "name": "Warner Bros."
+            },
+            {
+                "name": "DC Entertainment"
+            },
+            {
+                "name": "Syncopy"
+            },
+            {
+                "name": "Cruel and Unusual Films"
+            }
+        ],
         "runtime": 143.0,
         "genres": [
             "Action",
@@ -851,7 +1098,9 @@
             "super powers",
             "dc extended universe"
         ],
-        "director": {},
+        "director": {
+            "name": "Zack Snyder"
+        },
         "cast": [
             {
                 "name": "Henry Cavill",
@@ -881,14 +1130,40 @@
             "tmdb_rating": 6.5,
             "vote_count": 6359
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m2454",
         "title": "The Chronicles of Narnia: Prince Caspian",
         "overview": "One year after their incredible adventures in the Lion, the Witch and the Wardrobe, Peter, Edmund, Lucy and Susan Pevensie return to Narnia to aid a young prince whose life has been threatened by the evil King Miraz. Now, with the help of a colorful cast of new characters, including Trufflehunter the badger and Nikabrik the dwarf, the Pevensie clan embarks on an incredible quest to ensure that Narnia is returned to its rightful heir.",
-        "release_date": "2008-05-15",
         "release_year": 2008,
+        "production_companies": [
+            {
+                "name": "Walt Disney"
+            },
+            {
+                "name": "Walden Media"
+            },
+            {
+                "name": "Stillking Films"
+            },
+            {
+                "name": "Ozumi Films"
+            },
+            {
+                "name": "Propeler"
+            },
+            {
+                "name": "Silverbell Films"
+            },
+            {
+                "name": "Revolution Sun Studios"
+            }
+        ],
         "runtime": 150.0,
         "genres": [
             "Adventure",
@@ -909,7 +1184,9 @@
             "narnia",
             "fantasy world"
         ],
-        "director": {},
+        "director": {
+            "name": "Andrew Adamson"
+        },
         "cast": [
             {
                 "name": "Ben Barnes",
@@ -939,14 +1216,25 @@
             "tmdb_rating": 6.3,
             "vote_count": 1630
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m24428",
         "title": "The Avengers",
         "overview": "When an unexpected enemy emerges and threatens global safety and security, Nick Fury, director of the international peacekeeping agency known as S.H.I.E.L.D., finds himself in need of a team to pull the world back from the brink of disaster. Spanning the globe, a daring recruitment effort begins!",
-        "release_date": "2012-04-25",
         "release_year": 2012,
+        "production_companies": [
+            {
+                "name": "Paramount Pictures"
+            },
+            {
+                "name": "Marvel Studios"
+            }
+        ],
         "runtime": 143.0,
         "genres": [
             "Science Fiction",
@@ -965,7 +1253,9 @@
             "duringcreditsstinger",
             "marvel cinematic universe"
         ],
-        "director": {},
+        "director": {
+            "name": "Joss Whedon"
+        },
         "cast": [
             {
                 "name": "Robert Downey Jr.",
@@ -995,14 +1285,28 @@
             "tmdb_rating": 7.4,
             "vote_count": 11776
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m1865",
         "title": "Pirates of the Caribbean: On Stranger Tides",
         "overview": "Captain Jack Sparrow crosses paths with a woman from his past, and he's not sure if it's love -- or if she's a ruthless con artist who's using him to find the fabled Fountain of Youth. When she forces him aboard the Queen Anne's Revenge, the ship of the formidable pirate Blackbeard, Jack finds himself on an unexpected adventure in which he doesn't know who to fear more: Blackbeard or the woman from his past.",
-        "release_date": "2011-05-14",
         "release_year": 2011,
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures"
+            },
+            {
+                "name": "Jerry Bruckheimer Films"
+            },
+            {
+                "name": "Moving Picture Company (MPC)"
+            }
+        ],
         "runtime": 136.0,
         "genres": [
             "Adventure",
@@ -1027,7 +1331,9 @@
             "aftercreditsstinger",
             "3d"
         ],
-        "director": {},
+        "director": {
+            "name": "Rob Marshall"
+        },
         "cast": [
             {
                 "name": "Johnny Depp",
@@ -1057,14 +1363,34 @@
             "tmdb_rating": 6.4,
             "vote_count": 4948
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m41154",
         "title": "Men in Black 3",
         "overview": "Agents J (Will Smith) and K (Tommy Lee Jones) are back...in time. J has seen some inexplicable things in his 15 years with the Men in Black, but nothing, not even aliens, perplexes him as much as his wry, reticent partner. But when K's life and the fate of the planet are put at stake, Agent J will have to travel back in time to put things right. J discovers that there are secrets to the universe that K never told him - secrets that will reveal themselves as he teams up with the young Agent K (Josh Brolin) to save his partner, the agency, and the future of humankind.",
-        "release_date": "2012-05-23",
         "release_year": 2012,
+        "production_companies": [
+            {
+                "name": "Amblin Entertainment"
+            },
+            {
+                "name": "Media Magik Entertainment"
+            },
+            {
+                "name": "Imagenation Abu Dhabi FZ"
+            },
+            {
+                "name": "Hemisphere Media Capital"
+            },
+            {
+                "name": "Parkes/MacDonald Productions"
+            }
+        ],
         "runtime": 106.0,
         "genres": [
             "Action",
@@ -1079,7 +1405,9 @@
             "seeing the future",
             "changing history"
         ],
-        "director": {},
+        "director": {
+            "name": "Barry Sonnenfeld"
+        },
         "cast": [
             {
                 "name": "Will Smith",
@@ -1109,14 +1437,34 @@
             "tmdb_rating": 6.2,
             "vote_count": 4160
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m122917",
         "title": "The Hobbit: The Battle of the Five Armies",
         "overview": "Immediately after the events of The Desolation of Smaug, Bilbo and the dwarves try to defend Erebor's mountain of treasure from others who claim it: the men of the ruined Laketown and the elves of Mirkwood. Meanwhile an army of Orcs led by Azog the Defiler is marching on Erebor, fueled by the rise of the dark lord Sauron. Dwarves, elves and men must unite, and the hope for Middle-Earth falls into Bilbo's hands.",
-        "release_date": "2014-12-10",
         "release_year": 2014,
+        "production_companies": [
+            {
+                "name": "WingNut Films"
+            },
+            {
+                "name": "New Line Cinema"
+            },
+            {
+                "name": "Warner Bros. Pictures"
+            },
+            {
+                "name": "3Foot7"
+            },
+            {
+                "name": "Metro-Goldwyn-Mayer (MGM)"
+            }
+        ],
         "runtime": 144.0,
         "genres": [
             "Action",
@@ -1136,7 +1484,9 @@
             "epic battle",
             "sword and sorcery"
         ],
-        "director": {},
+        "director": {
+            "name": "Peter Jackson"
+        },
         "cast": [
             {
                 "name": "Martin Freeman",
@@ -1166,14 +1516,28 @@
             "tmdb_rating": 7.1,
             "vote_count": 4760
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m1930",
         "title": "The Amazing Spider-Man",
         "overview": "Peter Parker is an outcast high schooler abandoned by his parents as a boy, leaving him to be raised by his Uncle Ben and Aunt May. Like most teenagers, Peter is trying to figure out who he is and how he got to be the person he is today. As Peter discovers a mysterious briefcase that belonged to his father, he begins a quest to understand his parents' disappearance – leading him directly to Oscorp and the lab of Dr. Curt Connors, his father's former partner. As Spider-Man is set on a collision course with Connors' alter ego, The Lizard, Peter will make life-altering choices to use his powers and shape his destiny to become a hero.",
-        "release_date": "2012-06-27",
         "release_year": 2012,
+        "production_companies": [
+            {
+                "name": "Columbia Pictures"
+            },
+            {
+                "name": "Laura Ziskin Productions"
+            },
+            {
+                "name": "Marvel Entertainment"
+            }
+        ],
         "runtime": 136.0,
         "genres": [
             "Action",
@@ -1194,7 +1558,9 @@
             "social outcast",
             "duringcreditsstinger"
         ],
-        "director": {},
+        "director": {
+            "name": "Marc Webb"
+        },
         "cast": [
             {
                 "name": "Andrew Garfield",
@@ -1224,14 +1590,31 @@
             "tmdb_rating": 6.5,
             "vote_count": 6586
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m20662",
         "title": "Robin Hood",
         "overview": "When soldier Robin happens upon the dying Robert of Loxley, he promises to return the man's sword to his family in Nottingham. There, he assumes Robert's identity; romances his widow, Marion; and draws the ire of the town's sheriff and King John's henchman, Godfrey.",
-        "release_date": "2010-05-12",
         "release_year": 2010,
+        "production_companies": [
+            {
+                "name": "Imagine Entertainment"
+            },
+            {
+                "name": "Universal Pictures"
+            },
+            {
+                "name": "Scott Free Productions"
+            },
+            {
+                "name": "Relativity Media"
+            }
+        ],
         "runtime": 140.0,
         "genres": [
             "Action",
@@ -1247,7 +1630,9 @@
             "medieval",
             "king of england"
         ],
-        "director": {},
+        "director": {
+            "name": "Ridley Scott"
+        },
         "cast": [
             {
                 "name": "Russell Crowe",
@@ -1277,14 +1662,31 @@
             "tmdb_rating": 6.2,
             "vote_count": 1398
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m57158",
         "title": "The Hobbit: The Desolation of Smaug",
         "overview": "The Dwarves, Bilbo and Gandalf have successfully escaped the Misty Mountains, and Bilbo has gained the One Ring. They all continue their journey to get their gold back from the Dragon, Smaug.",
-        "release_date": "2013-12-11",
         "release_year": 2013,
+        "production_companies": [
+            {
+                "name": "WingNut Films"
+            },
+            {
+                "name": "New Line Cinema"
+            },
+            {
+                "name": "Warner Bros. Pictures"
+            },
+            {
+                "name": "Metro-Goldwyn-Mayer (MGM)"
+            }
+        ],
         "runtime": 161.0,
         "genres": [
             "Adventure",
@@ -1299,7 +1701,9 @@
             "wizard",
             "sword and sorcery"
         ],
-        "director": {},
+        "director": {
+            "name": "Peter Jackson"
+        },
         "cast": [
             {
                 "name": "Martin Freeman",
@@ -1329,14 +1733,31 @@
             "tmdb_rating": 7.6,
             "vote_count": 4524
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m2268",
         "title": "The Golden Compass",
         "overview": "After overhearing a shocking secret, precocious orphan Lyra Belacqua trades her carefree existence roaming the halls of Jordan College for an otherworldly adventure in the far North, unaware that it's part of her destiny.",
-        "release_date": "2007-12-04",
         "release_year": 2007,
+        "production_companies": [
+            {
+                "name": "New Line Cinema"
+            },
+            {
+                "name": "Ingenious Film Partners"
+            },
+            {
+                "name": "Depth of Field"
+            },
+            {
+                "name": "Scholastic Productions"
+            }
+        ],
         "runtime": 113.0,
         "genres": [
             "Adventure",
@@ -1353,7 +1774,9 @@
             "animal",
             "based on young adult novel"
         ],
-        "director": {},
+        "director": {
+            "name": "Chris Weitz"
+        },
         "cast": [
             {
                 "name": "Dakota Blue Richards",
@@ -1383,14 +1806,31 @@
             "tmdb_rating": 5.8,
             "vote_count": 1303
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m254",
         "title": "King Kong",
         "overview": "In 1933 New York, an overly ambitious movie producer coerces his cast and hired ship crew to travel to mysterious Skull Island, where they encounter Kong, a giant ape who is immediately smitten with the leading lady.",
-        "release_date": "2005-12-14",
         "release_year": 2005,
+        "production_companies": [
+            {
+                "name": "WingNut Films"
+            },
+            {
+                "name": "Universal Pictures"
+            },
+            {
+                "name": "Big Primate Pictures"
+            },
+            {
+                "name": "MFPV Film"
+            }
+        ],
         "runtime": 187.0,
         "genres": [
             "Adventure",
@@ -1409,7 +1849,9 @@
             "ship",
             "dinosaur"
         ],
-        "director": {},
+        "director": {
+            "name": "Peter Jackson"
+        },
         "cast": [
             {
                 "name": "Naomi Watts",
@@ -1439,14 +1881,28 @@
             "tmdb_rating": 6.6,
             "vote_count": 2337
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m597",
         "title": "Titanic",
         "overview": "84 years later, a 101-year-old woman named Rose DeWitt Bukater tells the story to her granddaughter Lizzy Calvert, Brock Lovett, Lewis Bodine, Bobby Buell and Anatoly Mikailavich on the Keldysh about her life set in April 10th 1912, on a ship called Titanic when young Rose boards the departing ship with the upper-class passengers and her mother, Ruth DeWitt Bukater, and her fiancé, Caledon Hockley. Meanwhile, a drifter and artist named Jack Dawson and his best friend Fabrizio De Rossi win third-class tickets to the ship in a game. And she explains the whole story from departure until the death of Titanic on its first and last voyage April 15th, 1912 at 2:20 in the morning.",
-        "release_date": "1997-11-18",
         "release_year": 1997,
+        "production_companies": [
+            {
+                "name": "Paramount Pictures"
+            },
+            {
+                "name": "Twentieth Century Fox Film Corporation"
+            },
+            {
+                "name": "Lightstorm Entertainment"
+            }
+        ],
         "runtime": 194.0,
         "genres": [
             "Drama",
@@ -1474,7 +1930,9 @@
             "3d",
             "1910s"
         ],
-        "director": {},
+        "director": {
+            "name": "James Cameron"
+        },
         "cast": [
             {
                 "name": "Kate Winslet",
@@ -1504,14 +1962,34 @@
             "tmdb_rating": 7.5,
             "vote_count": 7562
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m271110",
         "title": "Captain America: Civil War",
         "overview": "Following the events of Age of Ultron, the collective governments of the world pass an act designed to regulate all superhuman activity. This polarizes opinion amongst the Avengers, causing two factions to side with Iron Man or Captain America, which causes an epic battle between former allies.",
-        "release_date": "2016-04-27",
         "release_year": 2016,
+        "production_companies": [
+            {
+                "name": "Studio Babelsberg"
+            },
+            {
+                "name": "Marvel Studios"
+            },
+            {
+                "name": "Walt Disney Studios Motion Pictures"
+            },
+            {
+                "name": "Vita-Ray Dutch Productions (III)"
+            },
+            {
+                "name": "Deluxe Digital Studios"
+            }
+        ],
         "runtime": 147.0,
         "genres": [
             "Adventure",
@@ -1531,7 +2009,9 @@
             "marvel cinematic universe",
             "3d"
         ],
-        "director": {},
+        "director": {
+            "name": "Anthony Russo"
+        },
         "cast": [
             {
                 "name": "Chris Evans",
@@ -1561,14 +2041,31 @@
             "tmdb_rating": 7.1,
             "vote_count": 7241
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m44833",
         "title": "Battleship",
         "overview": "When mankind beams a radio signal into space, a reply comes from ‘Planet G’, in the form of several alien crafts that splash down in the waters off Hawaii. Lieutenant Alex Hopper is a weapons officer assigned to the USS John Paul Jones, part of an international naval coalition which becomes the world's last hope for survival as they engage the hostile alien force of unimaginable strength. While taking on the invaders, Hopper must also try to live up to the potential his brother, and his fiancée's father, Admiral Shane, expect of him.",
-        "release_date": "2012-04-11",
         "release_year": 2012,
+        "production_companies": [
+            {
+                "name": "Universal Pictures"
+            },
+            {
+                "name": "Hasbro"
+            },
+            {
+                "name": "Bluegrass Films"
+            },
+            {
+                "name": "Film 44"
+            }
+        ],
         "runtime": 131.0,
         "genres": [
             "Thriller",
@@ -1604,7 +2101,9 @@
             "mighty mo",
             "uss missouri"
         ],
-        "director": {},
+        "director": {
+            "name": "Peter Berg"
+        },
         "cast": [
             {
                 "name": "Taylor Kitsch",
@@ -1634,14 +2133,34 @@
             "tmdb_rating": 5.5,
             "vote_count": 2114
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m135397",
         "title": "Jurassic World",
         "overview": "Twenty-two years after the events of Jurassic Park, Isla Nublar now features a fully functioning dinosaur theme park, Jurassic World, as originally envisioned by John Hammond.",
-        "release_date": "2015-06-09",
         "release_year": 2015,
+        "production_companies": [
+            {
+                "name": "Universal Studios"
+            },
+            {
+                "name": "Amblin Entertainment"
+            },
+            {
+                "name": "Legendary Pictures"
+            },
+            {
+                "name": "Fuji Television Network"
+            },
+            {
+                "name": "Dentsu"
+            }
+        ],
         "runtime": 124.0,
         "genres": [
             "Action",
@@ -1667,7 +2186,9 @@
             "3d",
             "animal horror"
         ],
-        "director": {},
+        "director": {
+            "name": "Colin Trevorrow"
+        },
         "cast": [
             {
                 "name": "Chris Pratt",
@@ -1697,14 +2218,22 @@
             "tmdb_rating": 6.5,
             "vote_count": 8662
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m37724",
         "title": "Skyfall",
         "overview": "When Bond's latest assignment goes gravely wrong and agents around the world are exposed, MI6 is attacked forcing M to relocate the agency. These events cause her authority and position to be challenged by Gareth Mallory, the new Chairman of the Intelligence and Security Committee. With MI6 now compromised from both inside and out, M is left with one ally she can trust: Bond. 007 takes to the shadows - aided only by field agent, Eve - following a trail to the mysterious Silva, whose lethal and hidden motives have yet to reveal themselves.",
-        "release_date": "2012-10-25",
         "release_year": 2012,
+        "production_companies": [
+            {
+                "name": "Columbia Pictures"
+            }
+        ],
         "runtime": 143.0,
         "genres": [
             "Action",
@@ -1725,7 +2254,9 @@
             "impersonating a police officer",
             "macao"
         ],
-        "director": {},
+        "director": {
+            "name": "Sam Mendes"
+        },
         "cast": [
             {
                 "name": "Daniel Craig",
@@ -1755,14 +2286,28 @@
             "tmdb_rating": 6.9,
             "vote_count": 7604
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m558",
         "title": "Spider-Man 2",
         "overview": "Peter Parker is going through a major identity crisis. Burned out from being Spider-Man, he decides to shelve his superhero alter ego, which leaves the city suffering in the wake of carnage left by the evil Doc Ock. In the meantime, Parker still can't act on his feelings for Mary Jane Watson, a girl he's loved since childhood.",
-        "release_date": "2004-06-25",
         "release_year": 2004,
+        "production_companies": [
+            {
+                "name": "Columbia Pictures"
+            },
+            {
+                "name": "Laura Ziskin Productions"
+            },
+            {
+                "name": "Marvel Enterprises"
+            }
+        ],
         "runtime": 127.0,
         "genres": [
             "Action",
@@ -1782,7 +2327,9 @@
             "death",
             "super villain"
         ],
-        "director": {},
+        "director": {
+            "name": "Sam Raimi"
+        },
         "cast": [
             {
                 "name": "Tobey Maguire",
@@ -1812,14 +2359,22 @@
             "tmdb_rating": 6.7,
             "vote_count": 4321
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m68721",
         "title": "Iron Man 3",
         "overview": "When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.",
-        "release_date": "2013-04-18",
         "release_year": 2013,
+        "production_companies": [
+            {
+                "name": "Marvel Studios"
+            }
+        ],
         "runtime": 130.0,
         "genres": [
             "Action",
@@ -1844,7 +2399,9 @@
             "iron patriot",
             "extremis"
         ],
-        "director": {},
+        "director": {
+            "name": "Shane Black"
+        },
         "cast": [
             {
                 "name": "Robert Downey Jr.",
@@ -1874,14 +2431,34 @@
             "tmdb_rating": 6.8,
             "vote_count": 8806
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m12155",
         "title": "Alice in Wonderland",
         "overview": "Alice, an unpretentious and individual 19-year-old, is betrothed to a dunce of an English nobleman. At her engagement party, she escapes the crowd to consider whether to go through with the marriage and falls down a hole in the garden after spotting an unusual rabbit. Arriving in a strange and surreal place called 'Underland,' she finds herself in a world that resembles the nightmares she had as a child, filled with talking animals, villainous queens and knights, and frumious bandersnatches. Alice realizes that she is there for a reason – to conquer the horrific Jabberwocky and restore the rightful queen to her throne.",
-        "release_date": "2010-03-03",
         "release_year": 2010,
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures"
+            },
+            {
+                "name": "Team Todd"
+            },
+            {
+                "name": "Tim Burton Productions"
+            },
+            {
+                "name": "Roth Films"
+            },
+            {
+                "name": "Zanuck Company, The"
+            }
+        ],
         "runtime": 108.0,
         "genres": [
             "Family",
@@ -1897,7 +2474,9 @@
             "fantasy world",
             "3d"
         ],
-        "director": {},
+        "director": {
+            "name": "Tim Burton"
+        },
         "cast": [
             {
                 "name": "Mia Wasikowska",
@@ -1927,14 +2506,52 @@
             "tmdb_rating": 6.4,
             "vote_count": 4645
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m36668",
         "title": "X-Men: The Last Stand",
         "overview": "When a cure is found to treat mutations, lines are drawn amongst the X-Men and The Brotherhood, a band of powerful mutants organized under Xavier's former ally, Magneto.",
-        "release_date": "2006-05-24",
         "release_year": 2006,
+        "production_companies": [
+            {
+                "name": "Ingenious Film Partners"
+            },
+            {
+                "name": "Twentieth Century Fox Film Corporation"
+            },
+            {
+                "name": "Donners' Company"
+            },
+            {
+                "name": "Dune Entertainment"
+            },
+            {
+                "name": "Major Studio Partners"
+            },
+            {
+                "name": "Bad Hat Harry Productions"
+            },
+            {
+                "name": "thinkfilm"
+            },
+            {
+                "name": "Marvel Enterprises"
+            },
+            {
+                "name": "X3 Canada Productions"
+            },
+            {
+                "name": "X3US Productions"
+            },
+            {
+                "name": "XM3 Service"
+            }
+        ],
         "runtime": 104.0,
         "genres": [
             "Adventure",
@@ -1951,7 +2568,9 @@
             "cyclops",
             "aftercreditsstinger"
         ],
-        "director": {},
+        "director": {
+            "name": "Brett Ratner"
+        },
         "cast": [
             {
                 "name": "Hugh Jackman",
@@ -1981,14 +2600,25 @@
             "tmdb_rating": 6.3,
             "vote_count": 3525
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m62211",
         "title": "Monsters University",
         "overview": "A look at the relationship between Mike and Sulley during their days at Monsters University — when they weren't necessarily the best of friends.",
-        "release_date": "2013-06-20",
         "release_year": 2013,
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures"
+            },
+            {
+                "name": "Pixar Animation Studios"
+            }
+        ],
         "runtime": 104.0,
         "genres": [
             "Animation",
@@ -2004,7 +2634,9 @@
             "scary",
             "aftercreditsstinger"
         ],
-        "director": {},
+        "director": {
+            "name": "Dan Scanlon"
+        },
         "cast": [
             {
                 "name": "Billy Crystal",
@@ -2034,14 +2666,40 @@
             "tmdb_rating": 7.0,
             "vote_count": 3528
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m8373",
         "title": "Transformers: Revenge of the Fallen",
         "overview": "Sam Witwicky leaves the Autobots behind for a normal life. But when his mind is filled with cryptic symbols, the Decepticons target him and he is dragged back into the Transformers' war.",
-        "release_date": "2009-06-19",
         "release_year": 2009,
+        "production_companies": [
+            {
+                "name": "Paramount Pictures"
+            },
+            {
+                "name": "DreamWorks SKG"
+            },
+            {
+                "name": "Amblin Entertainment"
+            },
+            {
+                "name": "Di Bonaventura Pictures"
+            },
+            {
+                "name": "Platinum Dunes"
+            },
+            {
+                "name": "Hasbro Studios"
+            },
+            {
+                "name": "Revolution Sun Studios"
+            }
+        ],
         "runtime": 150.0,
         "genres": [
             "Science Fiction",
@@ -2060,7 +2718,9 @@
             "imax",
             "duringcreditsstinger"
         ],
-        "director": {},
+        "director": {
+            "name": "Michael Bay"
+        },
         "cast": [
             {
                 "name": "Shia LaBeouf",
@@ -2090,14 +2750,43 @@
             "tmdb_rating": 6.0,
             "vote_count": 3138
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m91314",
         "title": "Transformers: Age of Extinction",
         "overview": "As humanity picks up the pieces, following the conclusion of \"Transformers: Dark of the Moon,\" Autobots and Decepticons have all but vanished from the face of the planet. However, a group of powerful, ingenious businessman and scientists attempt to learn from past Transformer incursions and push the boundaries of technology beyond what they can control - all while an ancient, powerful Transformer menace sets Earth in his cross-hairs.",
-        "release_date": "2014-06-25",
         "release_year": 2014,
+        "production_companies": [
+            {
+                "name": "Paramount Pictures"
+            },
+            {
+                "name": "Amblin Entertainment"
+            },
+            {
+                "name": "Di Bonaventura Pictures"
+            },
+            {
+                "name": "Platinum Dunes"
+            },
+            {
+                "name": "China Movie Channel"
+            },
+            {
+                "name": "Hasbro Studios"
+            },
+            {
+                "name": "Ian Bryce Productions"
+            },
+            {
+                "name": "Revolution Sun Studios"
+            }
+        ],
         "runtime": 165.0,
         "genres": [
             "Science Fiction",
@@ -2113,7 +2802,9 @@
             "imax",
             "transforming robot"
         ],
-        "director": {},
+        "director": {
+            "name": "Michael Bay"
+        },
         "cast": [
             {
                 "name": "Mark Wahlberg",
@@ -2143,14 +2834,25 @@
             "tmdb_rating": 5.8,
             "vote_count": 3095
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m68728",
         "title": "Oz: The Great and Powerful",
         "overview": "Oscar Diggs, a small-time circus illusionist and con-artist, is whisked from Kansas to the Land of Oz where the inhabitants assume he's the great wizard of prophecy, there to save Oz from the clutches of evil.",
-        "release_date": "2013-03-07",
         "release_year": 2013,
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures"
+            },
+            {
+                "name": "Roth Films"
+            }
+        ],
         "runtime": 130.0,
         "genres": [
             "Fantasy",
@@ -2168,7 +2870,9 @@
             "wizard",
             "3d"
         ],
-        "director": {},
+        "director": {
+            "name": "Sam Raimi"
+        },
         "cast": [
             {
                 "name": "James Franco",
@@ -2198,14 +2902,31 @@
             "tmdb_rating": 5.7,
             "vote_count": 3530
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m102382",
         "title": "The Amazing Spider-Man 2",
         "overview": "For Peter Parker, life is busy. Between taking out the bad guys as Spider-Man and spending time with the person he loves, Gwen Stacy, high school graduation cannot come quickly enough. Peter has not forgotten about the promise he made to Gwen’s father to protect her by staying away, but that is a promise he cannot keep. Things will change for Peter when a new villain, Electro, emerges, an old friend, Harry Osborn, returns, and Peter uncovers new clues about his past.",
-        "release_date": "2014-04-16",
         "release_year": 2014,
+        "production_companies": [
+            {
+                "name": "Columbia Pictures"
+            },
+            {
+                "name": "Marvel Enterprises"
+            },
+            {
+                "name": "Avi Arad Productions"
+            },
+            {
+                "name": "Matt Tolmach Productions"
+            }
+        ],
         "runtime": 142.0,
         "genres": [
             "Action",
@@ -2222,7 +2943,9 @@
             "electricity",
             "super powers"
         ],
-        "director": {},
+        "director": {
+            "name": "Marc Webb"
+        },
         "cast": [
             {
                 "name": "Andrew Garfield",
@@ -2252,14 +2975,37 @@
             "tmdb_rating": 6.5,
             "vote_count": 4179
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m20526",
         "title": "TRON: Legacy",
         "overview": "Sam Flynn, the tech-savvy and daring son of Kevin Flynn, investigates his father's disappearance and is pulled into The Grid. With the help of a mysterious program named Quorra, Sam quests to stop evil dictator Clu from crossing into the real world.",
-        "release_date": "2010-12-10",
         "release_year": 2010,
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures"
+            },
+            {
+                "name": "LivePlanet"
+            },
+            {
+                "name": "Prana Studios"
+            },
+            {
+                "name": "Sean Bailey Productions"
+            },
+            {
+                "name": "Revolution Sun Studios"
+            },
+            {
+                "name": "Kontsept Film Company"
+            }
+        ],
         "runtime": 125.0,
         "genres": [
             "Adventure",
@@ -2278,7 +3024,9 @@
             "neon light",
             "autocracy"
         ],
-        "director": {},
+        "director": {
+            "name": "Joseph Kosinski"
+        },
         "cast": [
             {
                 "name": "Garrett Hedlund",
@@ -2308,14 +3056,25 @@
             "tmdb_rating": 6.3,
             "vote_count": 2841
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m49013",
         "title": "Cars 2",
         "overview": "Star race car Lightning McQueen and his pal Mater head overseas to compete in the World Grand Prix race. But the road to the championship becomes rocky as Mater gets caught up in an intriguing adventure of his own: international espionage.",
-        "release_date": "2011-06-11",
         "release_year": 2011,
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures"
+            },
+            {
+                "name": "Pixar Animation Studios"
+            }
+        ],
         "runtime": 106.0,
         "genres": [
             "Animation",
@@ -2363,14 +3122,28 @@
             "tmdb_rating": 5.8,
             "vote_count": 2033
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m44912",
         "title": "Green Lantern",
         "overview": "For centuries, a small but powerful force of warriors called the Green Lantern Corps has sworn to keep intergalactic order. Each Green Lantern wears a ring that grants him superpowers. But when a new enemy called Parallax threatens to destroy the balance of power in the Universe, their fate and the fate of Earth lie in the hands of the first human ever recruited.",
-        "release_date": "2011-06-16",
         "release_year": 2011,
+        "production_companies": [
+            {
+                "name": "De Line Pictures"
+            },
+            {
+                "name": "Warner Bros."
+            },
+            {
+                "name": "DC Entertainment"
+            }
+        ],
         "runtime": 114.0,
         "genres": [
             "Adventure",
@@ -2390,7 +3163,9 @@
             "origin",
             "3d"
         ],
-        "director": {},
+        "director": {
+            "name": "Martin Campbell"
+        },
         "cast": [
             {
                 "name": "Ryan Reynolds",
@@ -2420,14 +3195,25 @@
             "tmdb_rating": 5.1,
             "vote_count": 2487
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m10193",
         "title": "Toy Story 3",
         "overview": "Woody, Buzz, and the rest of Andy's toys haven't been played with in years. With Andy about to go to college, the gang find themselves accidentally left at a nefarious day care center. The toys must band together to escape and return home to Andy.",
-        "release_date": "2010-06-16",
         "release_year": 2010,
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures"
+            },
+            {
+                "name": "Pixar Animation Studios"
+            }
+        ],
         "runtime": 103.0,
         "genres": [
             "Animation",
@@ -2449,7 +3235,9 @@
             "inanimate objects coming to life",
             "toy story"
         ],
-        "director": {},
+        "director": {
+            "name": "Lee Unkrich"
+        },
         "cast": [
             {
                 "name": "Tom Hanks",
@@ -2479,14 +3267,31 @@
             "tmdb_rating": 7.6,
             "vote_count": 4597
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m534",
         "title": "Terminator Salvation",
         "overview": "All grown up in post-apocalyptic 2018, John Connor must lead the resistance of humans against the increasingly dominating militaristic robots. But when Marcus Wright appears, his existence confuses the mission as Connor tries to determine whether Wright has come from the future or the past -- and whether he's friend or foe.",
-        "release_date": "2009-05-20",
         "release_year": 2009,
+        "production_companies": [
+            {
+                "name": "Columbia Pictures"
+            },
+            {
+                "name": "The Halcyon Company"
+            },
+            {
+                "name": "Wonderland Sound and Vision"
+            },
+            {
+                "name": "Warner Bros."
+            }
+        ],
         "runtime": 115.0,
         "genres": [
             "Action",
@@ -2508,7 +3313,9 @@
             "wartime",
             "los angeles"
         ],
-        "director": {},
+        "director": {
+            "name": "McG"
+        },
         "cast": [
             {
                 "name": "Christian Bale",
@@ -2538,14 +3345,49 @@
             "tmdb_rating": 5.9,
             "vote_count": 2463
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m168259",
         "title": "Furious 7",
         "overview": "Deckard Shaw seeks revenge against Dominic Toretto and his family for his comatose brother.",
-        "release_date": "2015-04-01",
         "release_year": 2015,
+        "production_companies": [
+            {
+                "name": "Universal Pictures"
+            },
+            {
+                "name": "Original Film"
+            },
+            {
+                "name": "Fuji Television Network"
+            },
+            {
+                "name": "Dentsu"
+            },
+            {
+                "name": "One Race Films"
+            },
+            {
+                "name": "China Film Co."
+            },
+            {
+                "name": "Québec Production Services Tax Credit"
+            },
+            {
+                "name": "Media Rights Capital (MRC)"
+            },
+            {
+                "name": "Abu Dhabi Film Commission"
+            },
+            {
+                "name": "Colorado Office of Film, Television & Media"
+            }
+        ],
         "runtime": 137.0,
         "genres": [
             "Action"
@@ -2591,14 +3433,40 @@
             "tmdb_rating": 7.3,
             "vote_count": 4176
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m72190",
         "title": "World War Z",
         "overview": "Life for former United Nations investigator Gerry Lane and his family seems content. Suddenly, the world is plagued by a mysterious infection turning whole human populations into rampaging mindless zombies. After barely escaping the chaos, Lane is persuaded to go on a mission to investigate this disease. What follows is a perilous trek around the world where Lane must brave horrific dangers and long odds to find answers before human civilization falls.",
-        "release_date": "2013-06-20",
         "release_year": 2013,
+        "production_companies": [
+            {
+                "name": "Paramount Pictures"
+            },
+            {
+                "name": "GK Films"
+            },
+            {
+                "name": "Skydance Productions"
+            },
+            {
+                "name": "Hemisphere Media Capital"
+            },
+            {
+                "name": "Apparatus Productions"
+            },
+            {
+                "name": "Latina Pictures"
+            },
+            {
+                "name": "2DUX²"
+            }
+        ],
         "runtime": 116.0,
         "genres": [
             "Action",
@@ -2615,7 +3483,9 @@
             "multiple perspectives",
             "zombie apocalypse"
         ],
-        "director": {},
+        "director": {
+            "name": "Marc Forster"
+        },
         "cast": [
             {
                 "name": "Brad Pitt",
@@ -2645,14 +3515,40 @@
             "tmdb_rating": 6.7,
             "vote_count": 5560
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m127585",
         "title": "X-Men: Days of Future Past",
         "overview": "The ultimate X-Men ensemble fights a war for the survival of the species across two time periods as they join forces with their younger selves in an epic battle that must change the past – to save our future.",
-        "release_date": "2014-05-15",
         "release_year": 2014,
+        "production_companies": [
+            {
+                "name": "Twentieth Century Fox Film Corporation"
+            },
+            {
+                "name": "Donners' Company"
+            },
+            {
+                "name": "Marvel Entertainment"
+            },
+            {
+                "name": "Bad Hat Harry Productions"
+            },
+            {
+                "name": "TSG Entertainment"
+            },
+            {
+                "name": "Down Productions"
+            },
+            {
+                "name": "Revolution Sun Studios"
+            }
+        ],
         "runtime": 131.0,
         "genres": [
             "Action",
@@ -2672,7 +3568,9 @@
             "aftercreditsstinger",
             "changing the past or future"
         ],
-        "director": {},
+        "director": {
+            "name": "Bryan Singer"
+        },
         "cast": [
             {
                 "name": "Hugh Jackman",
@@ -2702,14 +3600,31 @@
             "tmdb_rating": 7.5,
             "vote_count": 6032
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m54138",
         "title": "Star Trek Into Darkness",
         "overview": "When the crew of the Enterprise is called back home, they find an unstoppable force of terror from within their own organization has detonated the fleet and everything it stands for, leaving our world in a state of crisis.  With a personal score to settle, Captain Kirk leads a manhunt to a war-zone world to capture a one man weapon of mass destruction. As our heroes are propelled into an epic chess game of life and death, love will be challenged, friendships will be torn apart, and sacrifices must be made for the only family Kirk has left: his crew.",
-        "release_date": "2013-05-05",
         "release_year": 2013,
+        "production_companies": [
+            {
+                "name": "Paramount Pictures"
+            },
+            {
+                "name": "Skydance Productions"
+            },
+            {
+                "name": "Bad Robot"
+            },
+            {
+                "name": "Kurtzman/Orci"
+            }
+        ],
         "runtime": 132.0,
         "genres": [
             "Action",
@@ -2728,7 +3643,9 @@
             "terrorist bombing",
             "3d"
         ],
-        "director": {},
+        "director": {
+            "name": "J.J. Abrams"
+        },
         "cast": [
             {
                 "name": "Chris Pine",
@@ -2758,14 +3675,37 @@
             "tmdb_rating": 7.4,
             "vote_count": 4418
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m81005",
         "title": "Jack the Giant Slayer",
         "overview": "The story of an ancient war that is reignited when a young farmhand unwittingly opens a gateway between our world and a fearsome race of giants. Unleashed on the Earth for the first time in centuries, the giants strive to reclaim the land they once lost, forcing the young man, Jack into the battle of his life to stop them. Fighting for a kingdom, its people, and the love of a brave princess, he comes face to face with the unstoppable warriors he thought only existed in legend–and gets the chance to become a legend himself.",
-        "release_date": "2013-02-27",
         "release_year": 2013,
+        "production_companies": [
+            {
+                "name": "New Line Cinema"
+            },
+            {
+                "name": "Original Film"
+            },
+            {
+                "name": "Legendary Pictures"
+            },
+            {
+                "name": "Warner Bros."
+            },
+            {
+                "name": "Big Kid Pictures"
+            },
+            {
+                "name": "Bad Hat Harry Productions"
+            }
+        ],
         "runtime": 114.0,
         "genres": [
             "Action",
@@ -2776,7 +3716,9 @@
             "based on fairy tale",
             "giant"
         ],
-        "director": {},
+        "director": {
+            "name": "Bryan Singer"
+        },
         "cast": [
             {
                 "name": "Nicholas Hoult",
@@ -2806,14 +3748,37 @@
             "tmdb_rating": 5.5,
             "vote_count": 2598
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m64682",
         "title": "The Great Gatsby",
         "overview": "An adaptation of F. Scott Fitzgerald's Long Island-set novel, where Midwesterner Nick Carraway is lured into the lavish world of his neighbor, Jay Gatsby. Soon enough, however, Carraway will see through the cracks of Gatsby's nouveau riche existence, where obsession, madness, and tragedy await.",
-        "release_date": "2013-05-10",
         "release_year": 2013,
+        "production_companies": [
+            {
+                "name": "Village Roadshow Pictures"
+            },
+            {
+                "name": "Bazmark Films"
+            },
+            {
+                "name": "Warner Bros."
+            },
+            {
+                "name": "A&E Television Networks"
+            },
+            {
+                "name": "Red Wagon Entertainment"
+            },
+            {
+                "name": "Spectrum Films"
+            }
+        ],
         "runtime": 143.0,
         "genres": [
             "Drama",
@@ -2826,7 +3791,9 @@
             "hope",
             "3d"
         ],
-        "director": {},
+        "director": {
+            "name": "Baz Luhrmann"
+        },
         "cast": [
             {
                 "name": "Leonardo DiCaprio",
@@ -2856,14 +3823,25 @@
             "tmdb_rating": 7.3,
             "vote_count": 3769
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m9543",
         "title": "Prince of Persia: The Sands of Time",
         "overview": "A rogue prince reluctantly joins forces with a mysterious princess and together, they race against dark forces to safeguard an ancient dagger capable of releasing the Sands of Time – gift from the gods that can reverse time and allow its possessor to rule the world.",
-        "release_date": "2010-05-19",
         "release_year": 2010,
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures"
+            },
+            {
+                "name": "Jerry Bruckheimer Films"
+            }
+        ],
         "runtime": 116.0,
         "genres": [
             "Adventure",
@@ -2879,7 +3857,9 @@
             "regent",
             "based on video game"
         ],
-        "director": {},
+        "director": {
+            "name": "Mike Newell"
+        },
         "cast": [
             {
                 "name": "Jake Gyllenhaal",
@@ -2909,14 +3889,31 @@
             "tmdb_rating": 6.2,
             "vote_count": 2317
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m68726",
         "title": "Pacific Rim",
         "overview": "When legions of monstrous creatures, known as Kaiju, started rising from the sea, a war began that would take millions of lives and consume humanity's resources for years on end. To combat the giant Kaiju, a special type of weapon was devised: massive robots, called Jaegers, which are controlled simultaneously by two pilots whose minds are locked in a neural bridge. But even the Jaegers are proving nearly defenseless in the face of the relentless Kaiju. On the verge of defeat, the forces defending mankind have no choice but to turn to two unlikely heroes—a washed-up former pilot (Charlie Hunnam) and an untested trainee (Rinko Kikuchi)—who are teamed to drive a legendary but seemingly obsolete Jaeger from the past. Together, they stand as mankind's last hope against the mounting apocalypse.",
-        "release_date": "2013-07-11",
         "release_year": 2013,
+        "production_companies": [
+            {
+                "name": "Legendary Pictures"
+            },
+            {
+                "name": "Warner Bros."
+            },
+            {
+                "name": "Disney Double Dare You (DDY)"
+            },
+            {
+                "name": "Indochina Productions"
+            }
+        ],
         "runtime": 131.0,
         "genres": [
             "Action",
@@ -2964,14 +3961,31 @@
             "tmdb_rating": 6.7,
             "vote_count": 4794
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m38356",
         "title": "Transformers: Dark of the Moon",
         "overview": "Sam Witwicky takes his first tenuous steps into adulthood while remaining a reluctant human ally of Autobot-leader Optimus Prime. The film centers around the space race between the USSR and the USA, suggesting there was a hidden Transformers role in it all that remains one of the planet's most dangerous secrets.",
-        "release_date": "2011-06-28",
         "release_year": 2011,
+        "production_companies": [
+            {
+                "name": "Paramount Pictures"
+            },
+            {
+                "name": "Di Bonaventura Pictures"
+            },
+            {
+                "name": "Indochina Productions"
+            },
+            {
+                "name": "Hasbro Studios"
+            }
+        ],
         "runtime": 154.0,
         "genres": [
             "Action",
@@ -2992,7 +4006,9 @@
             "commando",
             "duringcreditsstinger"
         ],
-        "director": {},
+        "director": {
+            "name": "Michael Bay"
+        },
         "cast": [
             {
                 "name": "Shia LaBeouf",
@@ -3022,14 +4038,25 @@
             "tmdb_rating": 6.1,
             "vote_count": 3299
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m217",
         "title": "Indiana Jones and the Kingdom of the Crystal Skull",
         "overview": "Set during the Cold War, the Soviets – led by sword-wielding Irina Spalko – are in search of a crystal skull which has supernatural powers related to a mystical Lost City of Gold. After being captured and then escaping from them, Indy is coerced to head to Peru at the behest of a young man whose friend – and Indy's colleague – Professor Oxley has been captured for his knowledge of the skull's whereabouts.",
-        "release_date": "2008-05-21",
         "release_year": 2008,
+        "production_companies": [
+            {
+                "name": "Lucasfilm"
+            },
+            {
+                "name": "Paramount Pictures"
+            }
+        ],
         "runtime": 122.0,
         "genres": [
             "Adventure",
@@ -3053,7 +4080,9 @@
             "indiana jones",
             "archeology "
         ],
-        "director": {},
+        "director": {
+            "name": "Steven Spielberg"
+        },
         "cast": [
             {
                 "name": "Harrison Ford",
@@ -3083,14 +4112,25 @@
             "tmdb_rating": 5.7,
             "vote_count": 2495
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m105864",
         "title": "The Good Dinosaur",
         "overview": "An epic journey into the world of dinosaurs where an Apatosaurus named Arlo makes an unlikely human friend.",
-        "release_date": "2015-11-14",
         "release_year": 2015,
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures"
+            },
+            {
+                "name": "Pixar Animation Studios"
+            }
+        ],
         "runtime": 93.0,
         "genres": [
             "Adventure",
@@ -3108,7 +4148,9 @@
             "human",
             "journey"
         ],
-        "director": {},
+        "director": {
+            "name": "Peter Sohn"
+        },
         "cast": [
             {
                 "name": "Raymond Ochoa",
@@ -3138,14 +4180,25 @@
             "tmdb_rating": 6.6,
             "vote_count": 1736
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m62177",
         "title": "Brave",
         "overview": "Brave is set in the mystical Scottish Highlands, where Mérida is the princess of a kingdom ruled by King Fergus and Queen Elinor. An unruly daughter and an accomplished archer, Mérida one day defies a sacred custom of the land and inadvertently brings turmoil to the kingdom. In an attempt to set things right, Mérida seeks out an eccentric old Wise Woman and is granted an ill-fated wish. Also figuring into Mérida’s quest — and serving as comic relief — are the kingdom’s three lords: the enormous Lord MacGuffin, the surly Lord Macintosh, and the disagreeable Lord Dingwall.",
-        "release_date": "2012-06-21",
         "release_year": 2012,
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures"
+            },
+            {
+                "name": "Pixar Animation Studios"
+            }
+        ],
         "runtime": 93.0,
         "genres": [
             "Animation",
@@ -3174,7 +4227,9 @@
             "courage",
             "3d"
         ],
-        "director": {},
+        "director": {
+            "name": "Brenda Chapman"
+        },
         "cast": [
             {
                 "name": "Kelly Macdonald",
@@ -3204,14 +4259,40 @@
             "tmdb_rating": 6.7,
             "vote_count": 4641
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m188927",
         "title": "Star Trek Beyond",
         "overview": "The USS Enterprise crew explores the furthest reaches of uncharted space, where they encounter a mysterious new enemy who puts them and everything the Federation stands for to the test.",
-        "release_date": "2016-07-07",
         "release_year": 2016,
+        "production_companies": [
+            {
+                "name": "Paramount Pictures"
+            },
+            {
+                "name": "Bad Robot"
+            },
+            {
+                "name": "Perfect Storm Entertainment"
+            },
+            {
+                "name": "Alibaba Pictures Group"
+            },
+            {
+                "name": "Skydance Media"
+            },
+            {
+                "name": "Sneaky Shark"
+            },
+            {
+                "name": "Huahua Media"
+            }
+        ],
         "runtime": 122.0,
         "genres": [
             "Action",
@@ -3224,7 +4305,9 @@
             "hatred",
             "space opera"
         ],
-        "director": {},
+        "director": {
+            "name": "Justin Lin"
+        },
         "cast": [
             {
                 "name": "Chris Pine",
@@ -3254,14 +4337,28 @@
             "tmdb_rating": 6.6,
             "vote_count": 2568
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m10681",
         "title": "WALL·E",
         "overview": "WALL·E is the last robot left on an Earth that has been overrun with garbage and all humans have fled to outer space. For 700 years he has continued to try and clean up the mess, but has developed some rather interesting human-like qualities. When a ship arrives with a sleek new type of robot, WALL·E thinks he's finally found a friend and stows away on the ship when it leaves.",
-        "release_date": "2008-06-22",
         "release_year": 2008,
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures"
+            },
+            {
+                "name": "Pixar Animation Studios"
+            },
+            {
+                "name": "FortyFour Studios"
+            }
+        ],
         "runtime": 98.0,
         "genres": [
             "Animation",
@@ -3270,7 +4367,9 @@
         "keywords": [
             "romantic comedy"
         ],
-        "director": {},
+        "director": {
+            "name": "Andrew Stanton"
+        },
         "cast": [
             {
                 "name": "Ben Burtt",
@@ -3300,14 +4399,22 @@
             "tmdb_rating": 7.8,
             "vote_count": 6296
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m5174",
         "title": "Rush Hour 3",
         "overview": "After an attempted assassination on Ambassador Han, Inspector Lee and Detective Carter are back in action as they head to Paris to protect a French woman with knowledge of the Triads' secret leaders. Lee also holds secret meetings with a United Nations authority, but his personal struggles with a Chinese criminal mastermind named Kenji, which reveals that it's Lee's long-lost...brother.",
-        "release_date": "2007-08-08",
         "release_year": 2007,
+        "production_companies": [
+            {
+                "name": "New Line Cinema"
+            }
+        ],
         "runtime": 91.0,
         "genres": [
             "Action",
@@ -3318,7 +4425,9 @@
         "keywords": [
             "ambassador"
         ],
-        "director": {},
+        "director": {
+            "name": "Brett Ratner"
+        },
         "cast": [
             {
                 "name": "Chris Tucker",
@@ -3348,14 +4457,31 @@
             "tmdb_rating": 6.1,
             "vote_count": 783
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m14161",
         "title": "2012",
         "overview": "Dr. Adrian Helmsley, part of a worldwide geophysical team investigating the effect on the earth of radiation from unprecedented solar storms, learns that the earth's core is heating up. He warns U.S. President Thomas Wilson that the crust of the earth is becoming unstable and that without proper preparations for saving a fraction of the world's population, the entire race is doomed. Meanwhile, writer Jackson Curtis stumbles on the same information. While the world's leaders race to build \"arks\" to escape the impending cataclysm, Curtis struggles to find a way to save his family. Meanwhile, volcanic eruptions and earthquakes of unprecedented strength wreak havoc around the world.",
-        "release_date": "2009-10-10",
         "release_year": 2009,
+        "production_companies": [
+            {
+                "name": "Columbia Pictures"
+            },
+            {
+                "name": "Centropolis Entertainment"
+            },
+            {
+                "name": "The Mark Gordon Company"
+            },
+            {
+                "name": "Farewell Productions"
+            }
+        ],
         "runtime": 158.0,
         "genres": [
             "Action",
@@ -3375,7 +4501,9 @@
             "solar",
             "destruction  of mankind"
         ],
-        "director": {},
+        "director": {
+            "name": "Roland Emmerich"
+        },
         "cast": [
             {
                 "name": "John Cusack",
@@ -3405,14 +4533,25 @@
             "tmdb_rating": 5.6,
             "vote_count": 4903
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m17979",
         "title": "A Christmas Carol",
         "overview": "Miser Ebenezer Scrooge is awakened on Christmas Eve by spirits who reveal to him his own miserable existence, what opportunities he wasted in his youth, his current cruelties, and the dire fate that awaits him if he does not change his ways. Scrooge is faced with his own story of growing bitterness and meanness, and must decide what his own future will hold: death or redemption.",
-        "release_date": "2009-11-04",
         "release_year": 2009,
+        "production_companies": [
+            {
+                "name": "Walt Disney"
+            },
+            {
+                "name": "ImageMovers"
+            }
+        ],
         "runtime": 96.0,
         "genres": [
             "Animation",
@@ -3431,7 +4570,9 @@
             "charles dickens",
             "christmas"
         ],
-        "director": {},
+        "director": {
+            "name": "Robert Zemeckis"
+        },
         "cast": [
             {
                 "name": "Gary Oldman",
@@ -3461,14 +4602,31 @@
             "tmdb_rating": 6.6,
             "vote_count": 1095
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m76757",
         "title": "Jupiter Ascending",
         "overview": "In a universe where human genetic material is the most precious commodity, an impoverished young Earth woman becomes the key to strategic maneuvers and internal strife within a powerful dynasty…",
-        "release_date": "2015-02-04",
         "release_year": 2015,
+        "production_companies": [
+            {
+                "name": "Village Roadshow Pictures"
+            },
+            {
+                "name": "Dune Entertainment"
+            },
+            {
+                "name": "Anarchos Productions"
+            },
+            {
+                "name": "Warner Bros."
+            }
+        ],
         "runtime": 124.0,
         "genres": [
             "Science Fiction",
@@ -3483,7 +4641,9 @@
             "3d",
             "interspecies romance"
         ],
-        "director": {},
+        "director": {
+            "name": "Lilly Wachowski"
+        },
         "cast": [
             {
                 "name": "Mila Kunis",
@@ -3513,14 +4673,40 @@
             "tmdb_rating": 5.2,
             "vote_count": 2768
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m258489",
         "title": "The Legend of Tarzan",
         "overview": "Tarzan, having acclimated to life in London, is called back to his former home in the jungle to investigate the activities at a mining encampment.",
-        "release_date": "2016-06-29",
         "release_year": 2016,
+        "production_companies": [
+            {
+                "name": "Village Roadshow Pictures"
+            },
+            {
+                "name": "Dark Horse Entertainment"
+            },
+            {
+                "name": "Jerry Weintraub Productions"
+            },
+            {
+                "name": "RatPac-Dune Entertainment"
+            },
+            {
+                "name": "Beagle Pug Films"
+            },
+            {
+                "name": "Riche Productions"
+            },
+            {
+                "name": "Village Roadshow Films North America"
+            }
+        ],
         "runtime": 109.0,
         "genres": [
             "Action",
@@ -3533,7 +4719,9 @@
             "jungle",
             "animal attack"
         ],
-        "director": {},
+        "director": {
+            "name": "David Yates"
+        },
         "cast": [
             {
                 "name": "Alexander Skarsgård",
@@ -3563,14 +4751,25 @@
             "tmdb_rating": 5.5,
             "vote_count": 2430
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m411",
         "title": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
         "overview": "Siblings Lucy, Edmund, Susan and Peter step through a magical wardrobe and find the land of Narnia. There, the they discover a charming, once peaceful kingdom that has been plunged into eternal winter by the evil White Witch, Jadis. Aided by the wise and magnificent lion, Aslan, the children lead Narnia into a spectacular, climactic battle to be free of the Witch's glacial powers forever.",
-        "release_date": "2005-12-07",
         "release_year": 2005,
+        "production_companies": [
+            {
+                "name": "Walt Disney"
+            },
+            {
+                "name": "Walden Media"
+            }
+        ],
         "runtime": 143.0,
         "genres": [
             "Adventure",
@@ -3593,7 +4792,9 @@
             "fantasy world",
             "duringcreditsstinger"
         ],
-        "director": {},
+        "director": {
+            "name": "Andrew Adamson"
+        },
         "cast": [
             {
                 "name": "William Moseley",
@@ -3623,14 +4824,37 @@
             "tmdb_rating": 6.7,
             "vote_count": 2629
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m246655",
         "title": "X-Men: Apocalypse",
         "overview": "After the re-emergence of the world's first mutant, world-destroyer Apocalypse, the X-Men must unite to defeat his extinction level plan.",
-        "release_date": "2016-05-18",
         "release_year": 2016,
+        "production_companies": [
+            {
+                "name": "Twentieth Century Fox Film Corporation"
+            },
+            {
+                "name": "Donners' Company"
+            },
+            {
+                "name": "Marvel Entertainment"
+            },
+            {
+                "name": "Bad Hat Harry Productions"
+            },
+            {
+                "name": "TSG Entertainment"
+            },
+            {
+                "name": "Kinberg Genre"
+            }
+        ],
         "runtime": 144.0,
         "genres": [
             "Science Fiction"
@@ -3648,7 +4872,9 @@
             "aftercreditsstinger",
             "1980s"
         ],
-        "director": {},
+        "director": {
+            "name": "Bryan Singer"
+        },
         "cast": [
             {
                 "name": "James McAvoy",
@@ -3678,14 +4904,34 @@
             "tmdb_rating": 6.4,
             "vote_count": 4721
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m155",
         "title": "The Dark Knight",
         "overview": "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker.",
-        "release_date": "2008-07-16",
         "release_year": 2008,
+        "production_companies": [
+            {
+                "name": "DC Comics"
+            },
+            {
+                "name": "Legendary Pictures"
+            },
+            {
+                "name": "Warner Bros."
+            },
+            {
+                "name": "DC Entertainment"
+            },
+            {
+                "name": "Syncopy"
+            }
+        ],
         "runtime": 152.0,
         "genres": [
             "Drama",
@@ -3714,7 +4960,9 @@
             "super powers",
             "batman"
         ],
-        "director": {},
+        "director": {
+            "name": "Christopher Nolan"
+        },
         "cast": [
             {
                 "name": "Christian Bale",
@@ -3744,14 +4992,22 @@
             "tmdb_rating": 8.2,
             "vote_count": 12002
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m14160",
         "title": "Up",
         "overview": "Carl Fredricksen spent his entire life dreaming of exploring the globe and experiencing life to its fullest. But at age 78, life seems to have passed him by, until a twist of fate (and a persistent 8-year old Wilderness Explorer named Russell) gives him a new lease on life.",
-        "release_date": "2009-05-13",
         "release_year": 2009,
+        "production_companies": [
+            {
+                "name": "Pixar Animation Studios"
+            }
+        ],
         "runtime": 96.0,
         "genres": [
             "Animation",
@@ -3768,7 +5024,9 @@
             "duringcreditsstinger",
             "exploring"
         ],
-        "director": {},
+        "director": {
+            "name": "Pete Docter"
+        },
         "cast": [
             {
                 "name": "Ed Asner",
@@ -3798,14 +5056,22 @@
             "tmdb_rating": 7.7,
             "vote_count": 6870
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m15512",
         "title": "Monsters vs Aliens",
         "overview": "When Susan Murphy is unwittingly clobbered by a meteor full of outer space gunk on her wedding day, she mysteriously grows to 49-feet-11-inches. The military jumps into action and captures Susan, secreting her away to a covert government compound. She is renamed Ginormica and placed in confinement with a ragtag group of Monsters...",
-        "release_date": "2009-03-19",
         "release_year": 2009,
+        "production_companies": [
+            {
+                "name": "DreamWorks Animation"
+            }
+        ],
         "runtime": 94.0,
         "genres": [
             "Animation",
@@ -3850,14 +5116,22 @@
             "tmdb_rating": 6.0,
             "vote_count": 1423
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m1726",
         "title": "Iron Man",
         "overview": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
-        "release_date": "2008-04-30",
         "release_year": 2008,
+        "production_companies": [
+            {
+                "name": "Marvel Studios"
+            }
+        ],
         "runtime": 126.0,
         "genres": [
             "Action",
@@ -3878,7 +5152,9 @@
             "counter terrorism",
             "agent coulson"
         ],
-        "director": {},
+        "director": {
+            "name": "Jon Favreau"
+        },
         "cast": [
             {
                 "name": "Robert Downey Jr.",
@@ -3908,14 +5184,28 @@
             "tmdb_rating": 7.4,
             "vote_count": 8776
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m44826",
         "title": "Hugo",
         "overview": "Hugo is an orphan boy living in the walls of a train station in 1930s Paris. He learned to fix clocks and other gadgets from his father and uncle which he puts to use keeping the train station clocks running. The only thing that he has left that connects him to his dead father is an automaton (mechanical man) that doesn't work without a special key which Hugo needs to find to unlock the secret he believes it contains. On his adventures, he meets with a shopkeeper, George Melies, who works in the train station and his adventure-seeking god-daughter. Hugo finds that they have a surprising connection to his father and the automaton, and he discovers it unlocks some memories the old man has buried inside regarding his past.",
-        "release_date": "2011-11-22",
         "release_year": 2011,
+        "production_companies": [
+            {
+                "name": "Paramount Pictures"
+            },
+            {
+                "name": "Infinitum Nihil"
+            },
+            {
+                "name": "GK Films"
+            }
+        ],
         "runtime": 126.0,
         "genres": [
             "Adventure",
@@ -3939,7 +5229,9 @@
             "doberman",
             "3d"
         ],
-        "director": {},
+        "director": {
+            "name": "Martin Scorsese"
+        },
         "cast": [
             {
                 "name": "Ben Kingsley",
@@ -3969,14 +5261,31 @@
             "tmdb_rating": 7.0,
             "vote_count": 2141
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m8487",
         "title": "Wild Wild West",
         "overview": "Legless Southern inventor Dr. Arliss Loveless plans to rekindle the Civil War by assassinating President U.S. Grant. Only two men can stop him: gunfighter James West and master-of-disguise and inventor Artemus Gordon. The two must team up to thwart Loveless' plans.",
-        "release_date": "1999-06-29",
         "release_year": 1999,
+        "production_companies": [
+            {
+                "name": "Todman, Simon, LeMasters Productions"
+            },
+            {
+                "name": "Warner Bros."
+            },
+            {
+                "name": "Peters Entertainment"
+            },
+            {
+                "name": "Sonnenfeld Josephson Worldwide Entertainment"
+            }
+        ],
         "runtime": 106.0,
         "genres": [
             "Action",
@@ -3991,7 +5300,9 @@
             "steam locomotive",
             "drag"
         ],
-        "director": {},
+        "director": {
+            "name": "Barry Sonnenfeld"
+        },
         "cast": [
             {
                 "name": "Will Smith",
@@ -4021,14 +5332,34 @@
             "tmdb_rating": 5.1,
             "vote_count": 1020
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m1735",
         "title": "The Mummy: Tomb of the Dragon Emperor",
         "overview": "Archaeologist Rick O'Connell travels to China, pitting him against an emperor from the 2,000-year-old Han dynasty who's returned from the dead to pursue a quest for world domination. This time, O'Connell enlists the help of his wife and son to quash the so-called 'Dragon Emperor' and his abuse of supernatural power.",
-        "release_date": "2008-07-01",
         "release_year": 2008,
+        "production_companies": [
+            {
+                "name": "Universal Pictures"
+            },
+            {
+                "name": "China Film Co-Production Corporation"
+            },
+            {
+                "name": "Relativity Media"
+            },
+            {
+                "name": "Alphaville Films"
+            },
+            {
+                "name": "Sommers Company, The"
+            }
+        ],
         "runtime": 112.0,
         "genres": [
             "Adventure",
@@ -4036,7 +5367,9 @@
             "Fantasy"
         ],
         "keywords": [],
-        "director": {},
+        "director": {
+            "name": "Rob Cohen"
+        },
         "cast": [
             {
                 "name": "Brendan Fraser",
@@ -4066,14 +5399,34 @@
             "tmdb_rating": 5.2,
             "vote_count": 1387
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m297761",
         "title": "Suicide Squad",
         "overview": "From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government, undertaking high-risk black ops missions in exchange for commuted prison sentences.",
-        "release_date": "2016-08-02",
         "release_year": 2016,
+        "production_companies": [
+            {
+                "name": "DC Comics"
+            },
+            {
+                "name": "Dune Entertainment"
+            },
+            {
+                "name": "Atlas Entertainment"
+            },
+            {
+                "name": "Warner Bros."
+            },
+            {
+                "name": "DC Entertainment"
+            }
+        ],
         "runtime": 123.0,
         "genres": [
             "Action",
@@ -4092,7 +5445,9 @@
             "supervillain",
             "dc extended universe"
         ],
-        "director": {},
+        "director": {
+            "name": "David Ayer"
+        },
         "cast": [
             {
                 "name": "Will Smith",
@@ -4122,14 +5477,40 @@
             "tmdb_rating": 5.9,
             "vote_count": 7458
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m2698",
         "title": "Evan Almighty",
         "overview": "God contacts Congressman Evan Baxter and tells him to build an ark in preparation for a great flood.",
-        "release_date": "2007-06-09",
         "release_year": 2007,
+        "production_companies": [
+            {
+                "name": "Columbia Pictures"
+            },
+            {
+                "name": "Universal Pictures"
+            },
+            {
+                "name": "Spyglass Entertainment"
+            },
+            {
+                "name": "Shady Acres Entertainment"
+            },
+            {
+                "name": "Original Film"
+            },
+            {
+                "name": "Playtone"
+            },
+            {
+                "name": "Relativity Media"
+            }
+        ],
         "runtime": 96.0,
         "genres": [
             "Fantasy",
@@ -4151,7 +5532,9 @@
             "duringcreditsstinger",
             "noah's ark"
         ],
-        "director": {},
+        "director": {
+            "name": "Tom Shadyac"
+        },
         "cast": [
             {
                 "name": "Steve Carell",
@@ -4181,14 +5564,37 @@
             "tmdb_rating": 5.3,
             "vote_count": 1151
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m137113",
         "title": "Edge of Tomorrow",
         "overview": "Major Bill Cage is an officer who has never seen a day of combat when he is unceremoniously demoted and dropped into combat. Cage is killed within minutes, managing to take an alpha alien down with him. He awakens back at the beginning of the same day and is forced to fight and die again... and again - as physical contact with the alien has thrown him into a time loop.",
-        "release_date": "2014-05-27",
         "release_year": 2014,
+        "production_companies": [
+            {
+                "name": "Village Roadshow Pictures"
+            },
+            {
+                "name": "Warner Bros."
+            },
+            {
+                "name": "Viz Media"
+            },
+            {
+                "name": "Province of British Columbia Production Services Tax Credit"
+            },
+            {
+                "name": "3 Arts Entertainment"
+            },
+            {
+                "name": "RatPac-Dune Entertainment"
+            }
+        ],
         "runtime": 113.0,
         "genres": [
             "Action",
@@ -4206,7 +5612,9 @@
             "alien invasion",
             "exoskeleton"
         ],
-        "director": {},
+        "director": {
+            "name": "Doug Liman"
+        },
         "cast": [
             {
                 "name": "Tom Cruise",
@@ -4236,14 +5644,31 @@
             "tmdb_rating": 7.6,
             "vote_count": 4858
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m9804",
         "title": "Waterworld",
         "overview": "In a futuristic world where the polar ice caps have melted and made Earth a liquid planet, a beautiful barmaid rescues a mutant seafarer from a floating island prison. They escape, along with her young charge, Enola, and sail off aboard his ship. But the trio soon becomes the target of a menacing pirate who covets the map to 'Dryland' – which is tattooed on Enola's back.",
-        "release_date": "1995-07-28",
         "release_year": 1995,
+        "production_companies": [
+            {
+                "name": "Universal Pictures"
+            },
+            {
+                "name": "Gordon Company"
+            },
+            {
+                "name": "Davis Entertainment"
+            },
+            {
+                "name": "Licht/Mueller Film Corporation"
+            }
+        ],
         "runtime": 135.0,
         "genres": [
             "Adventure",
@@ -4257,7 +5682,9 @@
             "dystopia",
             "doomsday"
         ],
-        "director": {},
+        "director": {
+            "name": "Kevin Reynolds"
+        },
         "cast": [
             {
                 "name": "Kevin Costner",
@@ -4287,14 +5714,34 @@
             "tmdb_rating": 5.9,
             "vote_count": 992
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m14869",
         "title": "G.I. Joe: The Rise of Cobra",
         "overview": "From the Egyptian desert to deep below the polar ice caps, the elite G.I. JOE team uses the latest in next-generation spy and military equipment to fight the corrupt arms dealer Destro and the growing threat of the mysterious Cobra organization to prevent them from plunging the world into chaos.",
-        "release_date": "2009-08-04",
         "release_year": 2009,
+        "production_companies": [
+            {
+                "name": "Paramount Pictures"
+            },
+            {
+                "name": "Spyglass Entertainment"
+            },
+            {
+                "name": "Di Bonaventura Pictures"
+            },
+            {
+                "name": "Hasbro"
+            },
+            {
+                "name": "Kontsept Film Company"
+            }
+        ],
         "runtime": 118.0,
         "genres": [
             "Adventure",
@@ -4319,7 +5766,9 @@
             "evil",
             "cobra"
         ],
-        "director": {},
+        "director": {
+            "name": "Stephen Sommers"
+        },
         "cast": [
             {
                 "name": "Dennis Quaid",
@@ -4349,14 +5798,25 @@
             "tmdb_rating": 5.6,
             "vote_count": 1962
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m150540",
         "title": "Inside Out",
         "overview": "Growing up can be a bumpy road, and it's no exception for Riley, who is uprooted from her Midwest life when her father starts a new job in San Francisco. Like all of us, Riley is guided by her emotions - Joy, Fear, Anger, Disgust and Sadness. The emotions live in Headquarters, the control center inside Riley's mind, where they help advise her through everyday life. As Riley and her emotions struggle to adjust to a new life in San Francisco, turmoil ensues in Headquarters. Although Joy, Riley's main and most important emotion, tries to keep things positive, the emotions conflict on how best to navigate a new city, house and school.",
-        "release_date": "2015-06-09",
         "release_year": 2015,
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures"
+            },
+            {
+                "name": "Pixar Animation Studios"
+            }
+        ],
         "runtime": 94.0,
         "genres": [
             "Drama",
@@ -4377,7 +5837,9 @@
             "3d",
             "emotions"
         ],
-        "director": {},
+        "director": {
+            "name": "Pete Docter"
+        },
         "cast": [
             {
                 "name": "Amy Poehler",
@@ -4407,14 +5869,31 @@
             "tmdb_rating": 8.0,
             "vote_count": 6560
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m278927",
         "title": "The Jungle Book",
         "overview": "After a threat from the tiger Shere Khan forces him to flee the jungle, a man-cub named Mowgli embarks on a journey of self discovery with the help of panther, Bagheera, and free spirited bear, Baloo.",
-        "release_date": "2016-04-07",
         "release_year": 2016,
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures"
+            },
+            {
+                "name": "Walt Disney Studios Motion Pictures"
+            },
+            {
+                "name": "Fairview Entertainment"
+            },
+            {
+                "name": "Moving Picture Company (MPC)"
+            }
+        ],
         "runtime": 106.0,
         "genres": [
             "Family",
@@ -4438,7 +5917,9 @@
             "animal",
             "talking to animals"
         ],
-        "director": {},
+        "director": {
+            "name": "Jon Favreau"
+        },
         "cast": [
             {
                 "name": "Neel Sethi",
@@ -4468,14 +5949,22 @@
             "tmdb_rating": 6.7,
             "vote_count": 2892
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m10138",
         "title": "Iron Man 2",
         "overview": "With the world now aware of his dual life as the armored superhero Iron Man, billionaire inventor Tony Stark faces pressure from the government, the press and the public to share his technology with the military. Unwilling to let go of his invention, Stark, with Pepper Potts and James 'Rhodey' Rhodes at his side, must forge new alliances – and confront powerful enemies.",
-        "release_date": "2010-04-28",
         "release_year": 2010,
+        "production_companies": [
+            {
+                "name": "Marvel Studios"
+            }
+        ],
         "runtime": 124.0,
         "genres": [
             "Adventure",
@@ -4491,7 +5980,9 @@
             "aftercreditsstinger",
             "marvel cinematic universe"
         ],
-        "director": {},
+        "director": {
+            "name": "Jon Favreau"
+        },
         "cast": [
             {
                 "name": "Robert Downey Jr.",
@@ -4521,14 +6012,25 @@
             "tmdb_rating": 6.6,
             "vote_count": 6849
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m58595",
         "title": "Snow White and the Huntsman",
         "overview": "After the Evil Queen marries the King, she performs a violent coup in which the King is murdered and his daughter, Snow White, is taken captive. Almost a decade later, a grown Snow White is still in the clutches of the Queen. In order to obtain immortality, The Evil Queen needs the heart of Snow White. After Snow escapes the castle, the Queen sends the Huntsman to find her in the Dark Forest.",
-        "release_date": "2012-05-30",
         "release_year": 2012,
+        "production_companies": [
+            {
+                "name": "Universal Pictures"
+            },
+            {
+                "name": "Roth Films"
+            }
+        ],
         "runtime": 127.0,
         "genres": [
             "Adventure",
@@ -4550,7 +6052,9 @@
             "imprisoned",
             "sorceress"
         ],
-        "director": {},
+        "director": {
+            "name": "Rupert Sanders"
+        },
         "cast": [
             {
                 "name": "Kristen Stewart",
@@ -4580,14 +6084,28 @@
             "tmdb_rating": 5.8,
             "vote_count": 3118
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m102651",
         "title": "Maleficent",
         "overview": "The untold story of Disney's most iconic villain from the 1959 classic 'Sleeping Beauty'. A beautiful, pure-hearted young woman, Maleficent has an idyllic life growing up in a peaceable forest kingdom, until one day when an invading army threatens the harmony of the land.  Maleficent rises to be the land's fiercest protector, but she ultimately suffers a ruthless betrayal – an act that begins to turn her heart into stone. Bent on revenge, Maleficent faces an epic battle with the invading King's successor and, as a result, places a curse upon his newborn infant Aurora. As the child grows, Maleficent realizes that Aurora holds the key to peace in the kingdom - and to Maleficent's true happiness as well.",
-        "release_date": "2014-05-28",
         "release_year": 2014,
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures"
+            },
+            {
+                "name": "Walt Disney Studios Motion Pictures"
+            },
+            {
+                "name": "Roth Films"
+            }
+        ],
         "runtime": 97.0,
         "genres": [
             "Fantasy",
@@ -4607,7 +6125,9 @@
             "literary adaptation",
             "3d"
         ],
-        "director": {},
+        "director": {
+            "name": "Robert Stromberg"
+        },
         "cast": [
             {
                 "name": "Angelina Jolie",
@@ -4637,14 +6157,28 @@
             "tmdb_rating": 7.0,
             "vote_count": 4496
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m119450",
         "title": "Dawn of the Planet of the Apes",
         "overview": "A group of scientists in San Francisco struggle to stay alive in the aftermath of a plague that is wiping out humanity, while Caesar tries to maintain dominance over his community of intelligent apes.",
-        "release_date": "2014-06-26",
         "release_year": 2014,
+        "production_companies": [
+            {
+                "name": "Ingenious Media"
+            },
+            {
+                "name": "Chernin Entertainment"
+            },
+            {
+                "name": "TSG Entertainment"
+            }
+        ],
         "runtime": 130.0,
         "genres": [
             "Science Fiction",
@@ -4668,7 +6202,9 @@
             "plague",
             "3d"
         ],
-        "director": {},
+        "director": {
+            "name": "Matt Reeves"
+        },
         "cast": [
             {
                 "name": "Andy Serkis",
@@ -4698,14 +6234,40 @@
             "tmdb_rating": 7.3,
             "vote_count": 4410
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m79698",
         "title": "The Lovers",
         "overview": "The Lovers is an epic romance time travel adventure film. Helmed by Roland Joffé from a story by Ajey Jhankar, the film is a sweeping tale of an impossible love set against the backdrop of the first Anglo-Maratha war across two time periods and continents and centred around four characters — a British officer in 18th century colonial India, the Indian woman he falls deeply in love with, an American present-day marine biologist and his wife.",
-        "release_date": "2015-02-13",
         "release_year": 2015,
+        "production_companies": [
+            {
+                "name": "Corsan"
+            },
+            {
+                "name": "Bliss Media"
+            },
+            {
+                "name": "Limelight International Media Entertainment"
+            },
+            {
+                "name": "Neelmudra Entertainment"
+            },
+            {
+                "name": "Aristos Films"
+            },
+            {
+                "name": "Singularity Productions"
+            },
+            {
+                "name": "Wildkite"
+            }
+        ],
         "runtime": 109.0,
         "genres": [
             "Action",
@@ -4714,7 +6276,9 @@
             "Romance"
         ],
         "keywords": [],
-        "director": {},
+        "director": {
+            "name": "Roland Joffé"
+        },
         "cast": [
             {
                 "name": "Josh Hartnett",
@@ -4744,14 +6308,34 @@
             "tmdb_rating": 4.8,
             "vote_count": 34
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m64686",
         "title": "47 Ronin",
         "overview": "Based on the original 1941 movie from Japan, and from ancient Japan’s most enduring tale, the epic 3D fantasy-adventure 47 Ronin is born.  Keanu Reeves leads the cast as Kai, an outcast who joins Oishi (Hiroyuki Sanada), the leader of the 47 outcast samurai.  Together they seek vengeance upon the treacherous overlord who killed their master and banished their kind.  To restore honor to their homeland, the warriors embark upon a quest that challenges them with a series of trials that would destroy ordinary warriors.",
-        "release_date": "2013-12-06",
         "release_year": 2013,
+        "production_companies": [
+            {
+                "name": "Mid Atlantic Films"
+            },
+            {
+                "name": "Stuber Productions"
+            },
+            {
+                "name": "Universal"
+            },
+            {
+                "name": "Moving Picture Company (MPC)"
+            },
+            {
+                "name": "H2F Entertainment"
+            }
+        ],
         "runtime": 119.0,
         "genres": [
             "Drama",
@@ -4770,7 +6354,9 @@
             "half breed",
             "3d"
         ],
-        "director": {},
+        "director": {
+            "name": "Carl Rinsch"
+        },
         "cast": [
             {
                 "name": "Keanu Reeves",
@@ -4800,14 +6386,22 @@
             "tmdb_rating": 5.9,
             "vote_count": 1326
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m100402",
         "title": "Captain America: The Winter Soldier",
         "overview": "After the cataclysmic events in New York with The Avengers, Steve Rogers, aka Captain America is living quietly in Washington, D.C. and trying to adjust to the modern world. But when a S.H.I.E.L.D. colleague comes under attack, Steve becomes embroiled in a web of intrigue that threatens to put the world at risk. Joining forces with the Black Widow, Captain America struggles to expose the ever-widening conspiracy while fighting off professional assassins sent to silence him at every turn. When the full scope of the villainous plot is revealed, Captain America and the Black Widow enlist the help of a new ally, the Falcon. However, they soon find themselves up against an unexpected and formidable enemy—the Winter Soldier.",
-        "release_date": "2014-03-20",
         "release_year": 2014,
+        "production_companies": [
+            {
+                "name": "Marvel Studios"
+            }
+        ],
         "runtime": 136.0,
         "genres": [
             "Action",
@@ -4828,7 +6422,9 @@
             "3d",
             "political thriller"
         ],
-        "director": {},
+        "director": {
+            "name": "Anthony Russo"
+        },
         "cast": [
             {
                 "name": "Chris Evans",
@@ -4858,14 +6454,22 @@
             "tmdb_rating": 7.6,
             "vote_count": 5764
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m10192",
         "title": "Shrek Forever After",
         "overview": "A bored and domesticated Shrek pacts with deal-maker Rumpelstiltskin to get back to feeling like a real ogre again, but when he's duped and sent to a twisted version of Far Far Away—where Rumpelstiltskin is king, ogres are hunted, and he and Fiona have never met—he sets out to restore his world and reclaim his true love.",
-        "release_date": "2010-05-16",
         "release_year": 2010,
+        "production_companies": [
+            {
+                "name": "DreamWorks Animation"
+            }
+        ],
         "runtime": 93.0,
         "genres": [
             "Comedy",
@@ -4878,7 +6482,9 @@
             "ogre",
             "3d"
         ],
-        "director": {},
+        "director": {
+            "name": "Mike Mitchell"
+        },
         "cast": [
             {
                 "name": "Mike Myers",
@@ -4908,14 +6514,28 @@
             "tmdb_rating": 6.0,
             "vote_count": 1959
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m158852",
         "title": "Tomorrowland",
         "overview": "Bound by a shared destiny, a bright, optimistic teen bursting with scientific curiosity and a former boy-genius inventor jaded by disillusionment embark on a danger-filled mission to unearth the secrets of an enigmatic place somewhere in time and space that exists in their collective memory as \"Tomorrowland.\"",
-        "release_date": "2015-05-19",
         "release_year": 2015,
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures"
+            },
+            {
+                "name": "Babieka"
+            },
+            {
+                "name": "A113"
+            }
+        ],
         "runtime": 130.0,
         "genres": [
             "Adventure",
@@ -4932,7 +6552,9 @@
             "futuristic car",
             "futuristic city"
         ],
-        "director": {},
+        "director": {
+            "name": "Brad Bird"
+        },
         "cast": [
             {
                 "name": "Britt Robertson",
@@ -4962,14 +6584,25 @@
             "tmdb_rating": 6.2,
             "vote_count": 2846
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m177572",
         "title": "Big Hero 6",
         "overview": "The special bond that develops between plus-sized inflatable robot Baymax, and prodigy Hiro Hamada, who team up with a group of friends to form a band of high-tech heroes.",
-        "release_date": "2014-10-24",
         "release_year": 2014,
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures"
+            },
+            {
+                "name": "Walt Disney Animation Studios"
+            }
+        ],
         "runtime": 102.0,
         "genres": [
             "Adventure",
@@ -4994,7 +6627,9 @@
             "teen superheroes",
             "dead brother"
         ],
-        "director": {},
+        "director": {
+            "name": "Chris Williams"
+        },
         "cast": [
             {
                 "name": "Scott Adsit",
@@ -5024,14 +6659,22 @@
             "tmdb_rating": 7.8,
             "vote_count": 6135
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m82690",
         "title": "Wreck-It Ralph",
         "overview": "Wreck-It Ralph is the 9-foot-tall, 643-pound villain of an arcade video game named Fix-It Felix Jr., in which the game's titular hero fixes buildings that Ralph destroys. Wanting to prove he can be a good guy and not just a villain, Ralph escapes his game and lands in Hero's Duty, a first-person shooter where he helps the game's hero battle against alien invaders. He later enters Sugar Rush, a kart racing game set on tracks made of candies, cookies and other sweets. There, Ralph meets Vanellope von Schweetz who has learned that her game is faced with a dire threat that could affect the entire arcade, and one that Ralph may have inadvertently started.",
-        "release_date": "2012-11-01",
         "release_year": 2012,
+        "production_companies": [
+            {
+                "name": "Walt Disney Animation Studios"
+            }
+        ],
         "runtime": 108.0,
         "genres": [
             "Family",
@@ -5059,7 +6702,9 @@
             "interrupted wedding",
             "social reject"
         ],
-        "director": {},
+        "director": {
+            "name": "Rich Moore"
+        },
         "cast": [
             {
                 "name": "John C. Reilly",
@@ -5089,14 +6734,28 @@
             "tmdb_rating": 7.1,
             "vote_count": 4570
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m5255",
         "title": "The Polar Express",
         "overview": "When a doubting young boy takes an extraordinary train ride to the North Pole, he embarks on a journey of self-discovery that shows him that the wonder of life never fades for those who believe.",
-        "release_date": "2004-11-10",
         "release_year": 2004,
+        "production_companies": [
+            {
+                "name": "Golden Mean"
+            },
+            {
+                "name": "Playtone"
+            },
+            {
+                "name": "ImageMovers"
+            }
+        ],
         "runtime": 100.0,
         "genres": [
             "Adventure",
@@ -5117,7 +6776,9 @@
             "ticket",
             "christmas"
         ],
-        "director": {},
+        "director": {
+            "name": "Robert Zemeckis"
+        },
         "cast": [
             {
                 "name": "Tom Hanks",
@@ -5147,14 +6808,31 @@
             "tmdb_rating": 6.4,
             "vote_count": 1474
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m47933",
         "title": "Independence Day: Resurgence",
         "overview": "We always knew they were coming back. Using recovered alien technology, the nations of Earth have collaborated on an immense defense program to protect the planet. But nothing can prepare us for the aliens’ advanced and unprecedented force. Only the ingenuity of a few brave men and women can bring our world back from the brink of extinction.",
-        "release_date": "2016-06-22",
         "release_year": 2016,
+        "production_companies": [
+            {
+                "name": "Twentieth Century Fox Film Corporation"
+            },
+            {
+                "name": "Centropolis Entertainment"
+            },
+            {
+                "name": "TSG Entertainment"
+            },
+            {
+                "name": "Stereo D"
+            }
+        ],
         "runtime": 120.0,
         "genres": [
             "Action",
@@ -5165,7 +6843,9 @@
             "alternate history",
             "alien invasion"
         ],
-        "director": {},
+        "director": {
+            "name": "Roland Emmerich"
+        },
         "cast": [
             {
                 "name": "Liam Hemsworth",
@@ -5195,14 +6875,28 @@
             "tmdb_rating": 4.9,
             "vote_count": 2491
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m10191",
         "title": "How to Train Your Dragon",
         "overview": "As the son of a Viking leader on the cusp of manhood, shy Hiccup Horrendous Haddock III faces a rite of passage: he must kill a dragon to prove his warrior mettle. But after downing a feared dragon, he realizes that he no longer wants to destroy it, and instead befriends the beast – which he names Toothless – much to the chagrin of his warrior father",
-        "release_date": "2010-03-05",
         "release_year": 2010,
+        "production_companies": [
+            {
+                "name": "DreamWorks Animation"
+            },
+            {
+                "name": "Vertigo Entertainment"
+            },
+            {
+                "name": "Mad Hatter Entertainment"
+            }
+        ],
         "runtime": 98.0,
         "genres": [
             "Fantasy",
@@ -5231,7 +6925,9 @@
             "well",
             "warrior"
         ],
-        "director": {},
+        "director": {
+            "name": "Chris Sanders"
+        },
         "cast": [
             {
                 "name": "Jay Baruchel",
@@ -5261,14 +6957,37 @@
             "tmdb_rating": 7.5,
             "vote_count": 4227
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m296",
         "title": "Terminator 3: Rise of the Machines",
         "overview": "It's been 10 years since John Connor saved Earth from Judgment Day, and he's now living under the radar, steering clear of using anything Skynet can trace. That is, until he encounters T-X, a robotic assassin ordered to finish what T-1000 started. Good thing Connor's former nemesis, the Terminator, is back to aid the now-adult Connor … just like he promised.",
-        "release_date": "2003-07-02",
         "release_year": 2003,
+        "production_companies": [
+            {
+                "name": "Columbia Pictures"
+            },
+            {
+                "name": "Intermedia Films"
+            },
+            {
+                "name": "Warner Bros."
+            },
+            {
+                "name": "C-2 Pictures"
+            },
+            {
+                "name": "IMF Internationale Medien und Film GmbH & Co. 3. Produktions KG"
+            },
+            {
+                "name": "Mostow/Lieberman Productions"
+            }
+        ],
         "runtime": 109.0,
         "genres": [
             "Action",
@@ -5291,7 +7010,9 @@
             "dystopia",
             "psychiatrist"
         ],
-        "director": {},
+        "director": {
+            "name": "Jonathan Mostow"
+        },
         "cast": [
             {
                 "name": "Arnold Schwarzenegger",
@@ -5321,14 +7042,31 @@
             "tmdb_rating": 5.9,
             "vote_count": 2143
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m118340",
         "title": "Guardians of the Galaxy",
         "overview": "Light years from Earth, 26 years after being abducted, Peter Quill finds himself the prime target of a manhunt after discovering an orb wanted by Ronan the Accuser.",
-        "release_date": "2014-07-30",
         "release_year": 2014,
+        "production_companies": [
+            {
+                "name": "Marvel Studios"
+            },
+            {
+                "name": "Moving Picture Company (MPC)"
+            },
+            {
+                "name": "Bulletproof Cupid"
+            },
+            {
+                "name": "Revolution Sun Studios"
+            }
+        ],
         "runtime": 121.0,
         "genres": [
             "Action",
@@ -5346,7 +7084,9 @@
             "duringcreditsstinger",
             "marvel cinematic universe"
         ],
-        "director": {},
+        "director": {
+            "name": "James Gunn"
+        },
         "cast": [
             {
                 "name": "Chris Pratt",
@@ -5376,14 +7116,34 @@
             "tmdb_rating": 7.9,
             "vote_count": 9742
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m157336",
         "title": "Interstellar",
         "overview": "Interstellar chronicles the adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
-        "release_date": "2014-11-05",
         "release_year": 2014,
+        "production_companies": [
+            {
+                "name": "Paramount Pictures"
+            },
+            {
+                "name": "Legendary Pictures"
+            },
+            {
+                "name": "Warner Bros."
+            },
+            {
+                "name": "Syncopy"
+            },
+            {
+                "name": "Lynda Obst Productions"
+            }
+        ],
         "runtime": 169.0,
         "genres": [
             "Adventure",
@@ -5423,7 +7183,9 @@
             "time paradox",
             "relativity"
         ],
-        "director": {},
+        "director": {
+            "name": "Christopher Nolan"
+        },
         "cast": [
             {
                 "name": "Matthew McConaughey",
@@ -5453,14 +7215,28 @@
             "tmdb_rating": 8.1,
             "vote_count": 10867
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m27205",
         "title": "Inception",
         "overview": "Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: \"inception\", the implantation of another person's idea into a target's subconscious.",
-        "release_date": "2010-07-14",
         "release_year": 2010,
+        "production_companies": [
+            {
+                "name": "Legendary Pictures"
+            },
+            {
+                "name": "Warner Bros."
+            },
+            {
+                "name": "Syncopy"
+            }
+        ],
         "runtime": 148.0,
         "genres": [
             "Action",
@@ -5479,7 +7255,9 @@
             "redemption",
             "female hero"
         ],
-        "director": {},
+        "director": {
+            "name": "Christopher Nolan"
+        },
         "cast": [
             {
                 "name": "Leonardo DiCaprio",
@@ -5509,14 +7287,25 @@
             "tmdb_rating": 8.1,
             "vote_count": 13752
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m315011",
         "title": "Shin Godzilla",
         "overview": "From the mind behind Evangelion comes a hit larger than life.  When a massive, gilled monster emerges from the deep and tears through the city, the government scrambles to save its citizens.  A rag-tag team of volunteers cuts through a web of red tape to uncover the monster's weakness and its mysterious ties to a foreign superpower.  But time is not on their side - the greatest catastrophe to ever befall the world is about to evolve right before their very eyes.",
-        "release_date": "2016-07-29",
         "release_year": 2016,
+        "production_companies": [
+            {
+                "name": "Cine Bazar"
+            },
+            {
+                "name": "Toho Pictures"
+            }
+        ],
         "runtime": 120.0,
         "genres": [
             "Action",
@@ -5533,7 +7322,9 @@
             "kaiju",
             "toyko"
         ],
-        "director": {},
+        "director": {
+            "name": "Hideaki Anno"
+        },
         "cast": [
             {
                 "name": "Hiroki Hasegawa",
@@ -5563,14 +7354,31 @@
             "tmdb_rating": 6.5,
             "vote_count": 143
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     },
     {
         "_id": "m49051",
         "title": "The Hobbit: An Unexpected Journey",
         "overview": "Bilbo Baggins, a hobbit enjoying his quiet life, is swept into an epic quest by Gandalf the Grey and thirteen dwarves who seek to reclaim their mountain home from Smaug, the dragon.",
-        "release_date": "2012-11-26",
         "release_year": 2012,
+        "production_companies": [
+            {
+                "name": "WingNut Films"
+            },
+            {
+                "name": "New Line Cinema"
+            },
+            {
+                "name": "Warner Bros. Pictures"
+            },
+            {
+                "name": "Metro-Goldwyn-Mayer (MGM)"
+            }
+        ],
         "runtime": 169.0,
         "genres": [
             "Adventure",
@@ -5599,7 +7407,9 @@
             "ancient",
             "gnomes"
         ],
-        "director": {},
+        "director": {
+            "name": "Peter Jackson"
+        },
         "cast": [
             {
                 "name": "Ian McKellen",
@@ -5629,14 +7439,31 @@
             "tmdb_rating": 7.0,
             "vote_count": 8297
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": true
+        }
     },
     {
         "_id": "m9799",
         "title": "The Fast and the Furious",
         "overview": "Domenic Toretto is a Los Angeles street racer suspected of masterminding a series of big-rig hijackings. When undercover cop Brian O'Conner infiltrates Toretto's iconoclastic crew, he falls for Toretto's sister and must choose a side: the gang or the LAPD.",
-        "release_date": "2001-06-22",
         "release_year": 2001,
+        "production_companies": [
+            {
+                "name": "Universal Pictures"
+            },
+            {
+                "name": "Original Film"
+            },
+            {
+                "name": "Ardustry Entertainment"
+            },
+            {
+                "name": "Mediastream Film GmbH & Co. Productions KG"
+            }
+        ],
         "runtime": 106.0,
         "genres": [
             "Action",
@@ -5654,7 +7481,9 @@
             "aftercreditsstinger",
             "duringcreditsstinger"
         ],
-        "director": {},
+        "director": {
+            "name": "Rob Cohen"
+        },
         "cast": [
             {
                 "name": "Paul Walker",
@@ -5684,6 +7513,10 @@
             "tmdb_rating": 6.6,
             "vote_count": 3428
         },
-        "reviews": []
+        "reviews": [],
+        "flags": {
+            "has_reviews": false,
+            "is_popular": false
+        }
     }
 ]
