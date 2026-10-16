@@ -59,7 +59,7 @@ for _, row in merged_df.iterrows():
            director = {
                "name": crew_member["name"]
            }
-           break
+           break    
   except:
         pass
 
