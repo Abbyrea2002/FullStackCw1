@@ -2,7 +2,9 @@ import pandas as pd
 import json
 import ast
 import random
+from bson import ObjectId
 from pymongo import MongoClient
+
 
 REVIEWER_NAMES = [
   "Alex Morgan",
@@ -76,6 +78,7 @@ def create_reviews(count=20):
   for _ in range(count):
     stars = random.randint(1, 5)
     reviews.append({
+      "_id" : ObjectId(),
       "name": random.choice(REVIEWER_NAMES),
       "comment": random.choice(REVIEW_COMMENTS[stars]),
       "stars": stars,
@@ -94,10 +97,10 @@ merged_df = pd.merge(
     how="inner"
 )
 
-movies = []
+movies_list = []
 limit = 200
 for _, row in merged_df.iterrows():
-  if len(movies) >= limit:
+  if len(movies_list) >= limit:
     break
   try:
      production_companies_data = ast.literal_eval(row["production_companies"])
@@ -146,8 +149,6 @@ for _, row in merged_df.iterrows():
     
   movie = {
 
-        "_id": f"m{int(row['id'])}",
-
         "title": row["title_x"],
 
         "overview": row["overview"],
@@ -189,20 +190,20 @@ for _, row in merged_df.iterrows():
         },
     }
 
-  movies.append(movie)
+  movies_list.append(movie)
 
 client = MongoClient("mongodb://127.0.0.1:27017")
 db = client.moviesDB
-movies_collection = db.movies
+movies = db.movies
 
 with open("movies.json", "w", encoding="utf-8") as f:
-    json.dump(movies, f, indent=4, ensure_ascii=False)
+  json.dump(movies_list, f, indent=4, ensure_ascii=False, default=str)
 
 
-movies_collection.delete_many({})
+movies.delete_many({})
 
 
-movies_collection.insert_many(movies)
+movies.insert_many(movies_list)
 
 
 
