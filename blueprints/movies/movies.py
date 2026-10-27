@@ -24,7 +24,6 @@ def show_all_movies():
     return make_response(jsonify(movies_data), 200)
 
 
-
 # get movie
 @movies_bp.route("/api/v1.0/movie/<string:id>", methods=['GET'])
 def show_one_movie():
@@ -42,14 +41,57 @@ def show_one_movie():
 
 # add movie
 @movies_bp.route("/api/v1.0/movies", methods=['POST'])
+def add_movie():
+    data = request.get_json(silent=True)
 
+    if not isinstance(data, dict):
+        return make_response(jsonify({"error": "Request body must be a JSON object"}), 400)
+
+    required_fields = [
+        "title",
+        "overview", 
+        "release_year",
+        "production_companies",
+        "runtime",
+        "genres",
+        "keywords",
+        "director",
+        "cast",
+        "statistics",
+        "flags"
+    ]
+
+    missing_fields = []
+
+    for field in required_fields:
+        if field not in data:
+            missing_fields.append(field)
+  
+    if missing_fields:
+        return make_response(jsonify({"error": "Missing fields", "fields": missing_fields}), 400)
+
+    new_movie_id = movies.insert_one(data)
+    new_movie_url = "http://localhost:5000/api/v1.0/movies/" \
+    + str(new_movie_id.inserted_id)
+    return make_response(jsonify({"url": new_movie_url}), 201)
 
 # edit movie
 @movies_bp.route("/api/v1.0/movies<string:id>", methods=['PUT'])
+def edit_movie(id):
 
 # delete movie
 @movies_bp.route("/api/v1.0/movies/<string:id>", methods=['DELETE'])
+def delete_movie(id):
+    deleted_movie = movies.delete_one({"_id" : ObjectId(id)})
+    if deleted_movie.deleted_count == 1:
+        return make_response(jsonify({}, 204))
+    else:
+        return make_response(jsonify({"error" : "Invalid movie ID"}, 404))
 
 # get movies via keywords
 
 # get movies via genres
+
+#retrieve movies in decending order by year
+
+#retrieve movies in decending order by year
