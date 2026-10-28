@@ -5,6 +5,10 @@ from bson import ObjectId
 movies_bp = Blueprint("movies_bp", __name__)
 
 movies = globals.db.movies
+#check http status coded
+#can i extract and reuse any code?
+#finish enpoints
+#test
 
 # get movies
 @movies_bp.route("/api/v1.0/movies", methods=['GET'])
@@ -115,7 +119,7 @@ def edit_movie(id):
         if edited_movie.matched_count == 0:
             return make_response(jsonify({"error": "Movie not found"}), 404)
     else:
-        return make_response(jsonify({"error": "Invalid movie ID"}), 400)
+        return make_response(jsonify({"error": "Invalid movie ID"}), 404)
     edited_movie_url = "http://localhost:5000/api/v1.0/movies/" + id
     return make_response(jsonify({"url:": edited_movie_url}), 200)
 
