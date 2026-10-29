@@ -18,7 +18,7 @@ movies = globals.db.movies
 def add_review(id):
     data = request.get_json(silent=True)
 
-    if not isinstance(data, dict):
+    if not isinstance(data, dict) or not data:
         return make_response(jsonify({"error": "Request body must be a JSON object"}), 400)
 
     required_fields = [
@@ -36,20 +36,20 @@ def add_review(id):
 
       new_review = {
               "_id" : ObjectId(),
-              "name" : request.get_json["name"],
-              "comment" : request.get_json["comment"],
-              "stars" : request.get_json["stars"]
+              "name" : data["name"],
+              "comment" : data["comment"],
+              "stars" : data["stars"]
           }
 
       result = movies.update_one({"_id" : ObjectId(id)},
                                {"$push": {"reviews" : new_review}})
-      if result.match_count == 1:
+      if result.matched_count == 1:
           new_review_url = "/api/v1.0/movies/" + id + "/reviews/" + str(new_review["_id"])
           return make_response(jsonify({"url" : new_review_url}), 201)
       else:
           return make_response(jsonify({"error" : "No movie found"}), 404)
     else: 
-        return make_response(jsonify({"error" : "Inalid movie ID"}), 400)
+        return make_response(jsonify({"error" : "Invalid movie ID"}), 400)
 
 #get reviews
 @reviews_bp.route("/api/v1.0/movies/<string:id>/reviews", methods=["GET"])
@@ -65,7 +65,7 @@ def get_all_reviews(id):
         for review in movie["reviews"]:
             review["_id"] = str(review["_id"])
             review_data.append(review)
-            return make_response(jsonify(review_data), 200)
+        return make_response(jsonify(review_data), 200)
     else:
         return make_response(jsonify({"error" : "Invalid movie ID"}), 400)
 #get review
@@ -112,7 +112,7 @@ def edit_review(mid, rid):
 
                data = request.get_json(silent=True)
                
-               if not isinstance(data, dict):
+               if not isinstance(data, dict) or not data:
                        return make_response(jsonify({"error": "Request body must be a JSON object"}), 400)
                
                allowed_fields = [
@@ -126,13 +126,22 @@ def edit_review(mid, rid):
                    if field not in allowed_fields:
                        invalid_fields.append(field)
 
-                   if invalid_fields:
-                       return make_response(jsonify({"error" : "Fields can not be updated: " + invalid_fields}), 400)
+               if invalid_fields:
+                   return make_response(jsonify({
+                       "error": "Fields cannot be updated",
+                       "fields": invalid_fields
+                   }), 400)
                        
-               movies["reviews"].update_one(
-                   {"_id": ObjectId(id)},
-                   {"$set": data}
+               update_fields = {
+                   f"reviews.$.{field}": value
+                   for field, value in data.items()
+               }
+               result = movies.update_one(
+                   {"_id": movie_id, "reviews._id": review_id},
+                   {"$set": update_fields}
                )
+               if result.matched_count == 0:
+                   return make_response(jsonify({"error": "No review found"}), 404)
 
                edited_review_url = "http://localhost:5000/api/v1.0/movies/" + mid + "/reviews/" + rid
         
@@ -145,7 +154,7 @@ def edit_review(mid, rid):
 
 
 #delete review
-@reviews_bp.route("/api/v1.0/movies/<string:mid>/reviews/<string:rid>", methods=["GET"])
+@reviews_bp.route("/api/v1.0/movies/<string:mid>/reviews/<string:rid>", methods=["DELETE"])
 def delete_review(mid, rid):
     if re.fullmatch(r"[0-9a-fA-F]{24}", mid):
        movie_id = ObjectId(mid)
@@ -157,10 +166,12 @@ def delete_review(mid, rid):
            review_id = ObjectId(rid)
            if not any(review["_id"] == review_id for review in movie["reviews"]):
                return make_response(jsonify({"error" : "No review found"}), 404)
-           movie.update_one(
+           result = movies.update_one(
                {"_id" : movie_id, "reviews._id" : review_id},
                {"$pull" : {"reviews" : {"_id" : review_id}}}
            )
+           if result.modified_count == 0:
+               return make_response(jsonify({"error": "No review found"}), 404)
            return make_response(jsonify({}), 204)
        else:
            return make_response(jsonify({"error" : "Invalid review ID"}), 400)
