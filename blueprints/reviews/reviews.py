@@ -1,6 +1,7 @@
 from flask import Blueprint, request, make_response,jsonify
 import re
 from bson import ObjectId
+import globals
 
 reviews_bp = Blueprint("reviews_bp", __name__)
 
@@ -30,20 +31,25 @@ def add_review(id):
         return make_response(jsonify({"error": "JSON fields do not match fields required",
                                       "missing": list(set(required_fields) - set(data)),
                                       "unexpected": list(set(data) - set(required_fields))}), 400)
-    new_review = {
-            "_id" : ObjectId(),
-            "name" : request.get_json["name"],
-            "comment" : request.get_json["comment"],
-            "stars" : request.get_json["stars"]
-        }
+    
+    if re.fullmatch(r"[0-9a-fA-F]{24}", id):
 
-    result = movies.update_one({"_id" : ObjectId(id)},
+      new_review = {
+              "_id" : ObjectId(),
+              "name" : request.get_json["name"],
+              "comment" : request.get_json["comment"],
+              "stars" : request.get_json["stars"]
+          }
+
+      result = movies.update_one({"_id" : ObjectId(id)},
                                {"$push": {"reviews" : new_review}})
-    if result.match_count == 1:
-        new_review_url = "/api/v1.0/movies/" + id + "/reviews/" + str(new_review["_id"])
-        return make_response(jsonify({"url" : new_review_url}), 201)
-    else:
-        return make_response(jsonify({"error" : "Invalid movie ID"}), 40)
+      if result.match_count == 1:
+          new_review_url = "/api/v1.0/movies/" + id + "/reviews/" + str(new_review["_id"])
+          return make_response(jsonify({"url" : new_review_url}), 201)
+      else:
+          return make_response(jsonify({"error" : "No movie found"}), 404)
+    else: 
+        return make_response(jsonify({"error" : "Inalid movie ID"}), 400)
 
 #get reviews
 @reviews_bp.route("/api/v1.0/movies/<string:id>/reviews", methods=["GET"])
@@ -55,13 +61,13 @@ def get_all_reviews(id):
             {"reviews" : 1, "_id" : 0}
         )
         if movie is None:
-            return make_response(jsonify({"error" : "Invalid movie ID"}), 404)
+            return make_response(jsonify({"error" : "No movie found"}), 404)
         for review in movie["reviews"]:
             review["_id"] = str(review["_id"])
             review_data.append(review)
             return make_response(jsonify(review_data), 200)
     else:
-        return make_response(jsonify({"error" : "Invalid ID"}), 400)
+        return make_response(jsonify({"error" : "Invalid movie ID"}), 400)
 #get review
 @reviews_bp.route("/api/v1.0/movies/<string:mid>/reviews/<string:rid>", methods=["GET"])
 def get_review(mid, rid):
@@ -104,8 +110,33 @@ def edit_review(mid, rid):
                if not any(review["_id"] == review_id for review in movie["reviews"]):
                    return make_response(jsonify({"error" : "No review found"}), 404)
 
-              #finish this
-               return make_response(jsonify({}), 204)
+               data = request.get_json(silent=True)
+               
+               if not isinstance(data, dict):
+                       return make_response(jsonify({"error": "Request body must be a JSON object"}), 400)
+               
+               allowed_fields = [
+                       "name",
+                       "comment",
+                       "stars"
+                   ]
+               invalid_fields = []
+
+               for field in data:
+                   if field not in allowed_fields:
+                       invalid_fields.append(field)
+
+                   if invalid_fields:
+                       return make_response(jsonify({"error" : "Fields can not be updated: " + invalid_fields}), 400)
+                       
+               movies["reviews"].update_one(
+                   {"_id": ObjectId(id)},
+                   {"$set": data}
+               )
+
+               edited_review_url = "http://localhost:5000/api/v1.0/movies/" + mid + "/reviews/" + rid
+        
+               return make_response(jsonify({"url" : edited_review_url}), 200)
            else:
                return make_response(jsonify({"error" : "Invalid review ID"}), 400)
     else:
@@ -138,4 +169,3 @@ def delete_review(mid, rid):
 
 
        
-
