@@ -1,4 +1,5 @@
 from flask import Blueprint, request, make_response, jsonify
+from decorators import jwt_required, admin_required
 import re
 from bson import ObjectId
 import globals
@@ -7,11 +8,6 @@ import utils
 movies_bp = Blueprint("movies_bp", __name__)
 
 movies = globals.db.movies
-
-
-#finish enpoints
-#test
-
 
 @movies_bp.route("/api/v1.0/movies", methods=['GET'])
 def show_all_movies():
@@ -73,7 +69,9 @@ def get_movies_by_genre():
 
     skip = (page_num - 1) * per_page
     movies_data = []
-    for movie in movies.find({"genres": genre}).skip(skip).limit(per_page):
+    genre_pattern = re.compile(f"^{re.escape(genre)}$", re.IGNORECASE)
+
+    for movie in movies.find({"genres": genre_pattern}).skip(skip).limit(per_page):
         movie["_id"] = str(movie["_id"])
         for review in movie.get("reviews", []):
             review["_id"] = str(review["_id"])
@@ -113,27 +111,7 @@ def get_movies_by_year_ascending():
            
     skip = (page_num - 1) * per_page
     movies_data = []
-    for movie in movies.find({"flags.is_popular" : True}).skip(skip).limit(per_page):
-        movie["_id"] = str(movie["_id"])
-        for review in movie.get("reviews", []):
-            review["_id"] = str(review["_id"])
-        movies_data.append(movie)
-           
-    return make_response(jsonify(movies_data), 200)
-
-@movies_bp.route("/api/v1.0/movies/ascending", methods=['GET'])
-def get_movies_by_year_ascending():
-    pagination = utils.get_pagination(request.args)
-    if pagination is None:
-        return make_response(jsonify({
-            "error": "page_num and per_page must be positive integers"
-        }), 400)
-    page_num, per_page = pagination
-           
-           
-    skip = (page_num - 1) * per_page
-    movies_data = []
-    for movie in movies.find({"flags.has_reviews" : True}).skip(skip).limit(per_page):
+    for movie in movies.find().sort("release_year", 1).skip(skip).limit(per_page):
         movie["_id"] = str(movie["_id"])
         for review in movie.get("reviews", []):
             review["_id"] = str(review["_id"])
@@ -153,7 +131,7 @@ def get_popular_movies():
            
     skip = (page_num - 1) * per_page
     movies_data = []
-    for movie in movies.find().sort("release_year", 1).skip(skip).limit(per_page):
+    for movie in movies.find({"flags.is_popular": True}).skip(skip).limit(per_page):
         movie["_id"] = str(movie["_id"])
         for review in movie.get("reviews", []):
             review["_id"] = str(review["_id"])
@@ -161,7 +139,25 @@ def get_popular_movies():
            
     return make_response(jsonify(movies_data), 200)
 
-
+@movies_bp.route("/api/v1.0/movies/has-reviews", methods=['GET'])
+def get_movies_with_reviews():
+    pagination = utils.get_pagination(request.args)
+    if pagination is None:
+        return make_response(jsonify({
+            "error": "page_num and per_page must be positive integers"
+        }), 400)
+    page_num, per_page = pagination
+           
+           
+    skip = (page_num - 1) * per_page
+    movies_data = []
+    for movie in movies.find({"flags.has_reviews": True}).skip(skip).limit(per_page):
+        movie["_id"] = str(movie["_id"])
+        for review in movie.get("reviews", []):
+            review["_id"] = str(review["_id"])
+        movies_data.append(movie)
+           
+    return make_response(jsonify(movies_data), 200)
 
 @movies_bp.route("/api/v1.0/movies/<string:id>", methods=['GET'])
 def show_one_movie(id):
@@ -179,6 +175,7 @@ def show_one_movie(id):
 
 
 @movies_bp.route("/api/v1.0/movies", methods=['POST'])
+@jwt_required
 def add_movie():
     data = request.get_json(silent=True)
 
@@ -215,6 +212,8 @@ def add_movie():
 
 
 @movies_bp.route("/api/v1.0/movies/<string:id>", methods=['PATCH'])
+@jwt_required
+@admin_required
 def edit_movie(id):
     data = request.get_json(silent=True)
          
@@ -260,6 +259,8 @@ def edit_movie(id):
 
 
 @movies_bp.route("/api/v1.0/movies/<string:id>", methods=['DELETE'])
+@jwt_required
+@admin_required
 def delete_movie(id):
     if utils.is_valid_object_id(id):
        deleted_movie = movies.delete_one({"_id" : ObjectId(id)})
@@ -272,9 +273,3 @@ def delete_movie(id):
 
     else:
        return make_response(jsonify({"error": "Invalid movie ID"}), 400)
-
-
-
-#retrive movies based on popularity
-
-#retrieve movies based on having reviews

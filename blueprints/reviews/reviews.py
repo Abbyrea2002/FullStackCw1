@@ -1,17 +1,14 @@
 from flask import Blueprint, request, make_response,jsonify
-import re
+from decorators import jwt_required, admin_required
 from bson import ObjectId
 import globals
 import utils
 
 reviews_bp = Blueprint("reviews_bp", __name__)
 
-movies = globals.db.movies
-
-#add authenication
-#test
-
+movies = globals.db.movie
 @reviews_bp.route("/api/v1.0/movies/<string:id>/reviews", methods=["POST"])
+@jwt_required
 def add_review(id):
     data = request.get_json(silent=True)
 
@@ -101,8 +98,9 @@ def get_review(mid, rid):
     else:
         return make_response(jsonify({"error" : "Invalid movie ID"}), 400)
 
-
 @reviews_bp.route("/api/v1.0/movies/<string:mid>/reviews/<string:rid>", methods=["PATCH"])
+@jwt_required
+@admin_required
 def edit_review(mid, rid):
     if utils.is_valid_object_id(mid):
            movie_id = ObjectId(mid)
@@ -155,9 +153,10 @@ def edit_review(mid, rid):
                return make_response(jsonify({"error" : "Invalid review ID"}), 400)
     else:
          return make_response(jsonify({"error" : "Invalid movie ID"}), 400)
-
-#delete review
+    
 @reviews_bp.route("/api/v1.0/movies/<string:mid>/reviews/<string:rid>", methods=["DELETE"])
+@jwt_required
+@admin_required
 def delete_review(mid, rid):
     if utils.is_valid_object_id(mid):
        movie_id = ObjectId(mid)
