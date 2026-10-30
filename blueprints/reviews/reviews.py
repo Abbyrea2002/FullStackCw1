@@ -2,18 +2,15 @@ from flask import Blueprint, request, make_response,jsonify
 import re
 from bson import ObjectId
 import globals
+import utils
 
 reviews_bp = Blueprint("reviews_bp", __name__)
 
 movies = globals.db.movies
-#check http status code
-#finish edit endpoint
-#extract id checks
+
 #add authenication
 #test
 
-
-#add review
 @reviews_bp.route("/api/v1.0/movies/<string:id>/reviews", methods=["POST"])
 def add_review(id):
     data = request.get_json(silent=True)
@@ -32,7 +29,7 @@ def add_review(id):
                                       "missing": list(set(required_fields) - set(data)),
                                       "unexpected": list(set(data) - set(required_fields))}), 400)
     
-    if re.fullmatch(r"[0-9a-fA-F]{24}", id):
+    if utils.is_valid_object_id(id):
 
       new_review = {
               "_id" : ObjectId(),
@@ -51,27 +48,35 @@ def add_review(id):
     else: 
         return make_response(jsonify({"error" : "Invalid movie ID"}), 400)
 
-#get reviews
 @reviews_bp.route("/api/v1.0/movies/<string:id>/reviews", methods=["GET"])
 def get_all_reviews(id):
-    if re.fullmatch(r"[0-9a-fA-F]{24}", id):
-        review_data = []
+    pagination = utils.get_pagination(request.args)
+    if pagination is None:
+        return make_response(jsonify({
+            "error": "page_num and per_page must be positive integers"
+        }), 400)
+    page_num, per_page = pagination
+
+    if utils.is_valid_object_id(id):
         movie = movies.find_one(
             {"_id" : ObjectId(id)},
             {"reviews" : 1, "_id" : 0}
         )
         if movie is None:
             return make_response(jsonify({"error" : "No movie found"}), 404)
-        for review in movie["reviews"]:
+        start = (page_num - 1) * per_page
+        page_reviews = movie.get("reviews", [])[start:start + per_page]
+        review_data = []
+        for review in page_reviews:
             review["_id"] = str(review["_id"])
             review_data.append(review)
         return make_response(jsonify(review_data), 200)
     else:
         return make_response(jsonify({"error" : "Invalid movie ID"}), 400)
-#get review
+    
 @reviews_bp.route("/api/v1.0/movies/<string:mid>/reviews/<string:rid>", methods=["GET"])
 def get_review(mid, rid):
-    if re.fullmatch(r"[0-9a-fA-F]{24}", mid):
+    if utils.is_valid_object_id(mid):
         movie = movies.find_one(
             {"_id" : ObjectId(mid)},
             {"reviews" : 1}
@@ -79,7 +84,7 @@ def get_review(mid, rid):
         if movie is None:
             return make_response(jsonify({"error" : "No movie found"}), 404)
         
-        if re.fullmatch(r"[0-9a-fA-F]{24}", rid):
+        if utils.is_valid_object_id(rid):
 
           review_id = ObjectId(rid)
           review = None
@@ -96,16 +101,16 @@ def get_review(mid, rid):
     else:
         return make_response(jsonify({"error" : "Invalid movie ID"}), 400)
 
-#edit review
+
 @reviews_bp.route("/api/v1.0/movies/<string:mid>/reviews/<string:rid>", methods=["PATCH"])
 def edit_review(mid, rid):
-    if re.fullmatch(r"[0-9a-fA-F]{24}", mid):
+    if utils.is_valid_object_id(mid):
            movie_id = ObjectId(mid)
            movie = movies.find_one({"_id" : movie_id})
            if movie is None:
                return make_response(jsonify({"error" : "No movie found"}), 404)
            
-           if re.fullmatch(r"[0-9a-fA-F]{24}", rid):
+           if utils.is_valid_object_id(rid):
                review_id = ObjectId(rid)
                if not any(review["_id"] == review_id for review in movie["reviews"]):
                    return make_response(jsonify({"error" : "No review found"}), 404)
@@ -151,18 +156,16 @@ def edit_review(mid, rid):
     else:
          return make_response(jsonify({"error" : "Invalid movie ID"}), 400)
 
-
-
 #delete review
 @reviews_bp.route("/api/v1.0/movies/<string:mid>/reviews/<string:rid>", methods=["DELETE"])
 def delete_review(mid, rid):
-    if re.fullmatch(r"[0-9a-fA-F]{24}", mid):
+    if utils.is_valid_object_id(mid):
        movie_id = ObjectId(mid)
        movie = movies.find_one({"_id" : movie_id})
        if movie is None:
            return make_response(jsonify({"error" : "No movie found"}), 404)
        
-       if re.fullmatch(r"[0-9a-fA-F]{24}", rid):
+       if utils.is_valid_object_id(rid):
            review_id = ObjectId(rid)
            if not any(review["_id"] == review_id for review in movie["reviews"]):
                return make_response(jsonify({"error" : "No review found"}), 404)
