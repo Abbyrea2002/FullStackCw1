@@ -203,7 +203,7 @@ def add_movie():
             missing_fields.append(field)
   
     if missing_fields:
-        return make_response(jsonify({"error": "Missing fields", "fields": missing_fields}), 400)
+        return make_response(jsonify({"error": "Missing fields ", "fields ": missing_fields}), 400)
 
     new_movie_id = movies.insert_one(data)
     new_movie_url = "http://localhost:5000/api/v1.0/movies/" \
@@ -240,8 +240,8 @@ def edit_movie(id):
         if field not in allowed_fields:
             invalid_fields.append(field)
 
-        if invalid_fields:
-            return make_response(jsonify({"error": "Fields can not be updated: " + invalid_fields}), 400)
+    if invalid_fields:
+        return make_response(jsonify({"error": "Fields can not be updated ", "fields ": invalid_fields}), 400)
     
     if utils.is_valid_object_id(id):
         edited_movie = movies.update_one(
