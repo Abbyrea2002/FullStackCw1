@@ -54,23 +54,31 @@ def get_all_reviews(id):
         }), 400)
     page_num, per_page = pagination
 
-    if utils.is_valid_object_id(id):
-        movie = movies.find_one(
-            {"_id" : ObjectId(id)},
-            {"reviews" : 1, "_id" : 0}
-        )
-        if movie is None:
-            return make_response(jsonify({"error" : "No movie found"}), 404)
-        start = (page_num - 1) * per_page
-        page_reviews = movie.get("reviews", [])[start:start + per_page]
-        review_data = []
-        for review in page_reviews:
-            review["_id"] = str(review["_id"])
-            review_data.append(review)
-        return make_response(jsonify(review_data), 200)
-    else:
-        return make_response(jsonify({"error" : "Invalid movie ID"}), 400)
-    
+    if not utils.is_valid_object_id(id):
+        return make_response(jsonify({"error": "Invalid movie ID"}), 400)
+
+    if movies.count_documents({"_id": ObjectId(id)}) == 0:
+        return make_response(jsonify({"error": "No movie found"}), 404)
+    skip = (page_num - 1) * per_page
+    pipeline = [
+           {"$match": {"_id": ObjectId(id)}},
+           {"$project": {"reviews": 1}},
+           {"$unwind": "$reviews"},
+           {"$skip": skip},
+           {"$limit": per_page},
+           {
+               "$project": {
+                   "_id": {"$toString": "$reviews._id"},
+                   "name": "$reviews.name",
+                   "comment": "$reviews.comment",
+                   "stars": "$reviews.stars"
+            }
+        }
+    ]
+
+    review_data = list(movies.aggregate(pipeline))
+    return make_response(jsonify(review_data), 200)
+        
 @reviews_bp.route("/api/v1.0/movies/<string:mid>/reviews/<string:rid>", methods=["GET"])
 def get_review(mid, rid):
     if utils.is_valid_object_id(mid):
@@ -100,7 +108,6 @@ def get_review(mid, rid):
 
 @reviews_bp.route("/api/v1.0/movies/<string:mid>/reviews/<string:rid>", methods=["PATCH"])
 @jwt_required
-@admin_required
 def edit_review(mid, rid):
     if utils.is_valid_object_id(mid):
            movie_id = ObjectId(mid)
