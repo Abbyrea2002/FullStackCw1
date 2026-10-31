@@ -166,7 +166,7 @@ def show_one_movie(id):
         if movie is not None:
             movie['_id'] = str(movie['_id'])
             for review in movie['reviews']:
-                review['_id'] = str(movie['_id'])
+                review['_id'] = str(review['_id'])
             return make_response(jsonify(movie), 200)
         else: 
             return make_response(jsonify({"error" : "No movie found"}), 404)

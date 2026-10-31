@@ -6,7 +6,7 @@ import utils
 
 reviews_bp = Blueprint("reviews_bp", __name__)
 
-movies = globals.db.movie
+movies = globals.db.movies
 @reviews_bp.route("/api/v1.0/movies/<string:id>/reviews", methods=["POST"])
 @jwt_required
 def add_review(id):
