@@ -38,7 +38,7 @@ def add_review(id):
       result = movies.update_one({"_id" : ObjectId(id)},
                                {"$push": {"reviews" : new_review}})
       if result.matched_count == 1:
-          new_review_url = "/api/v1.0/movies/" + id + "/reviews/" + str(new_review["_id"])
+          new_review_url = "http://localhost:5000/api/v1.0/movies/" + id + "/reviews/" + str(new_review["_id"])
           return make_response(jsonify({"url" : new_review_url}), 201)
       else:
           return make_response(jsonify({"error" : "No movie found"}), 404)
