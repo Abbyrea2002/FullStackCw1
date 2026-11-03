@@ -39,7 +39,7 @@ def add_review(id):
                                {"$push": {"reviews" : new_review}})
       if result.matched_count == 1:
           new_review_url = "http://localhost:5000/api/v1.0/movies/" + id + "/reviews/" + str(new_review["_id"])
-          return make_response(jsonify({"url" : new_review_url}), 201)
+          return make_response(jsonify({"url" : new_review_url, "message": "Review added successfully"}), 201)
       else:
           return make_response(jsonify({"error" : "No movie found"}), 404)
     else: 
@@ -108,6 +108,7 @@ def get_review(mid, rid):
 
 @reviews_bp.route("/api/v1.0/movies/<string:mid>/reviews/<string:rid>", methods=["PATCH"])
 @jwt_required
+@admin_required
 def edit_review(mid, rid):
     if utils.is_valid_object_id(mid):
            movie_id = ObjectId(mid)
@@ -155,7 +156,7 @@ def edit_review(mid, rid):
 
                edited_review_url = "http://localhost:5000/api/v1.0/movies/" + mid + "/reviews/" + rid
         
-               return make_response(jsonify({"url" : edited_review_url}), 200)
+               return make_response(jsonify({"url" : edited_review_url, "message": "Review edited successfully"}), 200)
            else:
                return make_response(jsonify({"error" : "Invalid review ID"}), 400)
     else:
@@ -179,9 +180,7 @@ def delete_review(mid, rid):
                {"_id" : movie_id, "reviews._id" : review_id},
                {"$pull" : {"reviews" : {"_id" : review_id}}}
            )
-           if result.modified_count == 0:
-               return make_response(jsonify({"error": "No review found"}), 404)
-           return make_response(jsonify({}), 204)
+           return make_response(jsonify({"message" : "Review deleted successfully"}), 204)
        else:
            return make_response(jsonify({"error" : "Invalid review ID"}), 400)
     else:

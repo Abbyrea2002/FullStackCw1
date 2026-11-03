@@ -208,7 +208,8 @@ def add_movie():
     new_movie_id = movies.insert_one(data)
     new_movie_url = "http://localhost:5000/api/v1.0/movies/" \
     + str(new_movie_id.inserted_id)
-    return make_response(jsonify({"url": new_movie_url}), 201)
+    return make_response(jsonify({"url": new_movie_url, 
+                                  "message": "Movie added successfully"}), 201)
 
 
 @movies_bp.route("/api/v1.0/movies/<string:id>", methods=['PATCH'])
@@ -253,7 +254,7 @@ def edit_movie(id):
             return make_response(jsonify({"error": "Movie not found"}), 404)
         else:
             edited_movie_url = "http://localhost:5000/api/v1.0/movies/" + id
-            return make_response(jsonify({"url:": edited_movie_url}), 200)
+            return make_response(jsonify({"url:": edited_movie_url, "message": "Movie edited successfully"}), 200)
     else:
         return make_response(jsonify({"error": "Invalid movie ID"}), 404)
 
@@ -269,7 +270,7 @@ def delete_movie(id):
              return make_response(jsonify({"error": "No movie found"}), 404)
 
        else:
-             return "", 204
+             return make_response(jsonify({"message": "Movie deleted successfully"}), 204)
 
     else:
        return make_response(jsonify({"error": "Invalid movie ID"}), 400)

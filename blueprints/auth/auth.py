@@ -1,5 +1,5 @@
 import globals
-from decorators import jwt_required, admin_required
+from decorators import jwt_required
 from flask import Blueprint, request, make_response, jsonify
 import globals
 import bcrypt
