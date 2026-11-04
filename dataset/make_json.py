@@ -73,7 +73,8 @@ REVIEW_COMMENTS = {
 }
 
 
-def create_reviews(count=20):
+def create_reviews(min_count=0, max_count=25):
+  count = random.randint(min_count, max_count)
   reviews = []
   for _ in range(count):
     stars = random.randint(1, 5)
