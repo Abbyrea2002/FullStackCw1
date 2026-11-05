@@ -1,5 +1,5 @@
 
-def get_movie_invalid_fields(data):
+def get_invalid_movie_fields(data):
     invalid_fields = []
 
     if "title" in data and not isinstance(data["title"], str):

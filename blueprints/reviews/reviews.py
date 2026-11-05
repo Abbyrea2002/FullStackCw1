@@ -1,10 +1,11 @@
 from flask import Blueprint, request, make_response,jsonify
+from blueprints.reviews import review_validator as validator
 from decorators import jwt_required, admin_required
 from bson import ObjectId
 import globals
 import utils
 import jwt
-import validators
+
 
 reviews_bp = Blueprint("reviews_bp", __name__)
 
@@ -21,7 +22,7 @@ def add_review(id):
     if not isinstance(data, dict) or not data:
         return make_response(jsonify({"error": "Request body must be a JSON object"}), 400)
 
-    invalid_review_fields = validators.get_invalid_review_fields(data)
+    invalid_review_fields = validator.get_invalid_review_fields(data)
     if invalid_review_fields:
         return make_response(jsonify({"error": "Invalid review fields", "fields": invalid_review_fields}), 400)
 
@@ -87,6 +88,8 @@ def get_all_reviews(id):
            {
                "$project": {
                    "_id": {"$toString": "$reviews._id"},
+                   "user_id": {"$toString": "$reviews.user_id"},
+                   "username": "$reviews.username",
                    "name": "$reviews.name",
                    "comment": "$reviews.comment",
                    "stars": "$reviews.stars"
@@ -124,6 +127,7 @@ def get_review(mid, rid):
           if review is None:
               return make_response(jsonify({"error" : "No review found"}), 404)
           review["_id"] = str(review["_id"])
+          review["user_id"] = str(review["user_id"])
           return make_response(jsonify(review), 200)
         else:
             return make_response(jsonify({"error" : "Invalid review ID"}), 400)
@@ -210,7 +214,7 @@ def edit_review(mid, rid):
                if not isinstance(data, dict) or not data:
                        return make_response(jsonify({"error": "Request body must be a JSON object"}), 400)
 
-               invalid_review_fields = validators.get_invalid_review_fields(data)
+               invalid_review_fields = validator.get_invalid_review_fields(data)
                if invalid_review_fields:
                    return make_response(jsonify({"error": "Invalid review fields", "fields": invalid_review_fields}), 400)
 

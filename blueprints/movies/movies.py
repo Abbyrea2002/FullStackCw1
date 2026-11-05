@@ -1,7 +1,7 @@
 import re
 
 from flask import Blueprint, request, make_response, jsonify
-from blueprints.movies import validators
+from blueprints.movies import movie_validator as validator
 from decorators import jwt_required, admin_required
 from bson import ObjectId
 import globals
@@ -24,9 +24,11 @@ def show_all_movies():
     
     movies_data = []
     for movie in movies.find().skip(skip).limit(per_page):
-        movie['_id'] = str(movie['_id'])
+        movie["_id"] = str(movie["_id"])
         for review in movie.get('reviews', []):
-            review['_id'] = str(review['_id'])
+            review["_id"] = str(review["_id"])
+            if review.get("user_id") is not None:
+                review["user_id"] = str(review["user_id"])
         movies_data.append(movie)
 
     total_movies = movies.count_documents({})
@@ -57,9 +59,15 @@ def search_movies():
 
     filters = {}
     if keyword:
-        filters["keywords"] = keyword
+        filters["keywords"] = re.compile(
+            f"^{re.escape(keyword)}$",
+            re.IGNORECASE
+        )
     if genre:
-        filters["genres"] = genre
+        filters["genres"] = re.compile(
+            f"^{re.escape(genre)}$",
+            re.IGNORECASE
+        )
 
     pipeline = [
         {"$match": filters},
@@ -72,6 +80,8 @@ def search_movies():
         movie["_id"] = str(movie["_id"])
         for review in movie.get("reviews", []):
             review["_id"] = str(review["_id"])
+            if review.get("user_id") is not None:
+                review["user_id"] = str(review["user_id"])
     total_movies = movies.count_documents(filters)
     return make_response(jsonify({
         "results": movies_data,
@@ -98,6 +108,8 @@ def get_movies_by_year_decending():
         movie["_id"] = str(movie["_id"])
         for review in movie.get("reviews", []):
             review["_id"] = str(review["_id"])
+            if review.get("user_id") is not None:
+                review["user_id"] = str(review["user_id"])
         movies_data.append(movie)
 
     total_movies = movies.count_documents({})
@@ -125,6 +137,8 @@ def get_movies_by_year_ascending():
         movie["_id"] = str(movie["_id"])
         for review in movie.get("reviews", []):
             review["_id"] = str(review["_id"])
+            if review.get("user_id") is not None:
+                review["user_id"] = str(review["user_id"])
         movies_data.append(movie)
 
     total_movies = movies.count_documents({})
@@ -153,6 +167,8 @@ def get_popular_movies():
         movie["_id"] = str(movie["_id"])
         for review in movie.get("reviews", []):
             review["_id"] = str(review["_id"])
+            if review.get("user_id") is not None:
+                review["user_id"] = str(review["user_id"])
         movies_data.append(movie)
 
     total_movies = movies.count_documents(filters)
@@ -181,6 +197,8 @@ def get_movies_with_reviews():
         movie["_id"] = str(movie["_id"])
         for review in movie.get("reviews", []):
             review["_id"] = str(review["_id"])
+            if review.get("user_id") is not None:
+                review["user_id"] = str(review["user_id"])
         movies_data.append(movie)
 
     total_movies = movies.count_documents(filters)
@@ -192,9 +210,9 @@ def get_movies_with_reviews():
         "per_page": per_page
     }), 200)
 
-@movies_bp.route("/api/v1.0/movies/<string:title>", methods=['GET'])
-def show_one_movie(title):
-    title = title.strip()
+@movies_bp.route("/api/v1.0/movies/title", methods=['GET'])
+def show_one_movie():
+    title = request.args.get("title", "").strip()
 
     if not title:
         return make_response(jsonify({"error": "Title cannot be empty"}), 400)
@@ -211,6 +229,8 @@ def show_one_movie(title):
     movie['_id'] = str(movie['_id'])
     for review in movie['reviews']:
          review['_id'] = str(review['_id'])
+         if review.get("user_id") is not None:
+             review["user_id"] = str(review["user_id"])
 
     return make_response(jsonify(movie), 200)
 
@@ -247,7 +267,7 @@ def add_movie():
     if missing_fields:
         return make_response(jsonify({"error": "Missing fields", "fields": missing_fields}), 400)
 
-    invalid_fields = validators.get_invalid_movie_fields(data)
+    invalid_fields = validator.get_invalid_movie_fields(data)
     if invalid_fields:
         return make_response(jsonify({
             "error": "Invalid values for movie fields",
@@ -293,7 +313,7 @@ def edit_movie(id):
     if invalid_fields:
         return make_response(jsonify({"error": "Fields can not be updated ", "fields ": invalid_fields}), 400)
 
-    invalid_values = validators.get_invalid_movie_values(data)
+    invalid_values = validator.get_invalid_movie_fields(data)
     if invalid_values:
         return make_response(jsonify({
             "error": "Invalid values for movie fields",
