@@ -3,6 +3,8 @@ from decorators import jwt_required, admin_required
 from bson import ObjectId
 import globals
 import utils
+import jwt
+import validators
 
 reviews_bp = Blueprint("reviews_bp", __name__)
 
@@ -15,33 +17,39 @@ def add_review(id):
     if not isinstance(data, dict) or not data:
         return make_response(jsonify({"error": "Request body must be a JSON object"}), 400)
 
-    required_fields = [
-        "name",
-        "comment",
-        "stars"
-    ]
+    invalid_review_fields = validators.get_invalid_review_fields(data)
+    if invalid_review_fields:
+        return make_response(jsonify({"error": "Invalid review fields", "fields": invalid_review_fields}), 400)
 
-    if set(data) != set(required_fields):
-        return make_response(jsonify({"error": "JSON fields do not match fields required",
-                                      "missing": list(set(required_fields) - set(data)),
-                                      "unexpected": list(set(data) - set(required_fields))}), 400)
+    comment = data["comment"]
+    stars = data["stars"]
     
     if utils.is_valid_object_id(id):
 
-      new_review = {
+        token = request.headers.get('x-access-token')
+        decoded_token = jwt.decode(token, globals.secret_key, algorithms=["HS256"])
+        logged_in_user = decoded_token.get('user')
+
+        user = globals.db.users.find_one({"username": logged_in_user})
+        if user is None:
+            return make_response(jsonify({"error": "Authenticated user not found"}), 401)
+
+        new_review = {
               "_id" : ObjectId(),
-              "name" : data["name"],
-              "comment" : data["comment"],
-              "stars" : data["stars"]
+              "user_id" : user["_id"],
+              "username" : logged_in_user,
+              "name" : user["name"],
+              "comment" : comment.strip(),
+              "stars" : stars
           }
 
-      result = movies.update_one({"_id" : ObjectId(id)},
+        result = movies.update_one({"_id" : ObjectId(id)},
                                {"$push": {"reviews" : new_review}})
-      if result.matched_count == 1:
-          new_review_url = "http://localhost:5000/api/v1.0/movies/" + id + "/reviews/" + str(new_review["_id"])
-          return make_response(jsonify({"url" : new_review_url, "message": "Review added successfully"}), 201)
-      else:
-          return make_response(jsonify({"error" : "No movie found"}), 404)
+        if result.matched_count == 1:
+            new_review_url = "http://localhost:5000/api/v1.0/movies/" + id + "/reviews/" + str(new_review["_id"])
+            return make_response(jsonify({"url" : new_review_url, "message": "Review added successfully"}), 201)
+        else:
+            return make_response(jsonify({"error" : "No movie found"}), 404)
     else: 
         return make_response(jsonify({"error" : "Invalid movie ID"}), 400)
 
@@ -164,15 +172,20 @@ def edit_review(mid, rid):
                    return make_response(jsonify({"error" : "No review found"}), 404)
 
                data = request.get_json(silent=True)
-               
+
                if not isinstance(data, dict) or not data:
                        return make_response(jsonify({"error": "Request body must be a JSON object"}), 400)
-               
+
+               invalid_review_fields = validators.get_invalid_review_fields(data)
+               if invalid_review_fields:
+                   return make_response(jsonify({"error": "Invalid review fields", "fields": invalid_review_fields}), 400)
+
                allowed_fields = [
                        "name",
                        "comment",
                        "stars"
                    ]
+               
                invalid_fields = []
 
                for field in data:

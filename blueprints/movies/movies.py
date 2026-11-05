@@ -1,4 +1,5 @@
 from flask import Blueprint, request, make_response, jsonify
+from blueprints.movies import validators
 from decorators import jwt_required, admin_required
 import re
 from bson import ObjectId
@@ -190,7 +191,7 @@ def add_movie():
         "runtime",
         "genres",
         "keywords",
-        "director",
+        "directors",
         "cast",
         "statistics",
         "flags"
@@ -203,7 +204,14 @@ def add_movie():
             missing_fields.append(field)
   
     if missing_fields:
-        return make_response(jsonify({"error": "Missing fields ", "fields ": missing_fields}), 400)
+        return make_response(jsonify({"error": "Missing fields", "fields": missing_fields}), 400)
+
+    invalid_fields = validators.get_invalid_movie_fields(data)
+    if invalid_fields:
+        return make_response(jsonify({
+            "error": "Invalid values for movie fields",
+            "fields": invalid_fields
+        }), 400)
 
     new_movie_id = movies.insert_one(data)
     new_movie_url = "http://localhost:5000/api/v1.0/movies/" \
@@ -229,7 +237,7 @@ def edit_movie(id):
             "runtime",
             "genres",
             "keywords",
-            "director",
+            "directors",
             "cast",
             "statistics",
             "flags"
@@ -243,6 +251,13 @@ def edit_movie(id):
 
     if invalid_fields:
         return make_response(jsonify({"error": "Fields can not be updated ", "fields ": invalid_fields}), 400)
+
+    invalid_values = validators.get_invalid_movie_values(data)
+    if invalid_values:
+        return make_response(jsonify({
+            "error": "Invalid values for movie fields",
+            "fields": invalid_values
+        }), 400)
     
     if utils.is_valid_object_id(id):
         edited_movie = movies.update_one(

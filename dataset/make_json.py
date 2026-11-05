@@ -5,29 +5,11 @@ import random
 from bson import ObjectId
 from pymongo import MongoClient
 
+client = MongoClient("mongodb://127.0.0.1:27017")
+db = client.moviesDB
+user_collection = db.users
 
-REVIEWER_NAMES = [
-  "Alex Morgan",
-  "Sam Taylor",
-  "Jordan Lee",
-  "Casey Brown",
-  "Riley Wilson",
-  "Jamie Patel",
-  "Morgan Davis",
-  "Avery Chen",
-  "Taylor Kim",
-  "Cameron Scott",
-  "Drew Robinson",
-  "Quinn Murphy",
-  "Skyler Adams",
-  "Reese Thompson",
-  "Parker Nguyen",
-  "Rowan Clark",
-  "Emerson Wright",
-  "Finley Brooks",
-  "Hayden Rivera",
-  "Kendall Price",
-]
+existing_users = list(user_collection.find({}, {"username": 1, "name": 1}))
 
 REVIEW_COMMENTS = {
   1: [
@@ -76,14 +58,20 @@ REVIEW_COMMENTS = {
 def create_reviews(min_count=0, max_count=25):
   count = random.randint(min_count, max_count)
   reviews = []
+
   for _ in range(count):
     stars = random.randint(1, 5)
-    reviews.append({
-      "_id" : ObjectId(),
-      "name": random.choice(REVIEWER_NAMES),
+
+    user = random.choice(existing_users) if existing_users else None
+
+    review = {
+      "_id": ObjectId(),
+      "user_id": user["_id"] if user else None,
+      "name": user["name"] if user else None,
       "comment": random.choice(REVIEW_COMMENTS[stars]),
       "stars": stars,
-    })
+    }
+    reviews.append(review)
   return reviews
 
 
@@ -134,18 +122,17 @@ for _, row in merged_df.iterrows():
   except:
     cast = []
 
-  director = {}
+  directors = []
   try:
      crew_data = ast.literal_eval(row["crew"])
 
      for crew_member in crew_data:
          if crew_member["job"] == "Director":
-           director = {
+           directors.append({
                "name": crew_member["name"]
-           }
-           break    
+           })
   except:
-        pass
+      directors = []
 
     
   movie = {
@@ -166,7 +153,7 @@ for _, row in merged_df.iterrows():
 
         "keywords": keywords,
 
-        "director": director,
+        "directors": directors,
 
         "cast": cast,
 
