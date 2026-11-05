@@ -1,7 +1,8 @@
+import re
+
 from flask import Blueprint, request, make_response, jsonify
 from blueprints.movies import validators
 from decorators import jwt_required, admin_required
-import re
 from bson import ObjectId
 import globals
 import utils
@@ -28,11 +29,19 @@ def show_all_movies():
             review['_id'] = str(review['_id'])
         movies_data.append(movie)
 
-    return make_response(jsonify(movies_data), 200)
+    total_movies = movies.count_documents({})
+    total_pages = utils.get_total_pages(total_movies, per_page)
+        
+    return make_response(jsonify({"results": movies_data,
+                                  "total_pages": total_pages,
+                                  "current_page": page_num,
+                                  "total_items": total_movies,
+                                  "per_page": per_page
+                                  }), 200)
 
 
-@movies_bp.route("/api/v1.0/movies/keyword", methods=['GET'])
-def get_movies_by_keyword():
+@movies_bp.route("/api/v1.0/movies/search", methods=['GET'])
+def search_movies():
     pagination = utils.get_pagination(request.args)
     if pagination is None:
         return make_response(jsonify({
@@ -41,44 +50,37 @@ def get_movies_by_keyword():
     page_num, per_page = pagination
 
     keyword = request.args.get("keyword", "").strip()
-    if not keyword:
-        return make_response(jsonify({"error": "Keyword is required"}), 400)
-
-    skip = (page_num - 1) * per_page
-    movies_data = []
-    for movie in movies.find({"keywords": keyword}).skip(skip).limit(per_page):
-        movie["_id"] = str(movie["_id"])
-        for review in movie.get("reviews", []):
-            review["_id"] = str(review["_id"])
-        movies_data.append(movie)
-
-    return make_response(jsonify(movies_data), 200)
-
-
-@movies_bp.route("/api/v1.0/movies/genre", methods=['GET'])
-def get_movies_by_genre():
-    pagination = utils.get_pagination(request.args)
-    if pagination is None:
-        return make_response(jsonify({
-            "error": "page_num and per_page must be positive integers"
-        }), 400)
-    page_num, per_page = pagination
-
     genre = request.args.get("genre", "").strip()
-    if not genre:
-        return make_response(jsonify({"error": "Genre is required"}), 400)
 
-    skip = (page_num - 1) * per_page
-    movies_data = []
-    genre_pattern = re.compile(f"^{re.escape(genre)}$", re.IGNORECASE)
+    if not keyword and not genre:
+        return make_response(jsonify({"error": "No keyword or genre provided"}), 400)
 
-    for movie in movies.find({"genres": genre_pattern}).skip(skip).limit(per_page):
+    filters = {}
+    if keyword:
+        filters["keywords"] = keyword
+    if genre:
+        filters["genres"] = genre
+
+    pipeline = [
+        {"$match": filters},
+        {"$skip": (page_num - 1) * per_page},
+        {"$limit": per_page}
+    ]
+
+    movies_data = list(movies.aggregate(pipeline))
+    for movie in movies_data:
         movie["_id"] = str(movie["_id"])
         for review in movie.get("reviews", []):
             review["_id"] = str(review["_id"])
-        movies_data.append(movie)
+    total_movies = movies.count_documents(filters)
+    return make_response(jsonify({
+        "results": movies_data,
+        "total_pages": utils.get_total_pages(total_movies, per_page),
+        "current_page": page_num,
+        "total_items": total_movies,
+        "per_page": per_page
+    }), 200)
 
-    return make_response(jsonify(movies_data), 200)
 
 @movies_bp.route("/api/v1.0/movies/descending", methods=['GET'])
 def get_movies_by_year_decending():
@@ -97,8 +99,15 @@ def get_movies_by_year_decending():
         for review in movie.get("reviews", []):
             review["_id"] = str(review["_id"])
         movies_data.append(movie)
-       
-    return make_response(jsonify(movies_data), 200)
+
+    total_movies = movies.count_documents({})
+    return make_response(jsonify({
+        "results": movies_data,
+        "total_pages": utils.get_total_pages(total_movies, per_page),
+        "current_page": page_num,
+        "total_items": total_movies,
+        "per_page": per_page
+    }), 200)
 
 @movies_bp.route("/api/v1.0/movies/ascending", methods=['GET'])
 def get_movies_by_year_ascending():
@@ -117,8 +126,15 @@ def get_movies_by_year_ascending():
         for review in movie.get("reviews", []):
             review["_id"] = str(review["_id"])
         movies_data.append(movie)
-           
-    return make_response(jsonify(movies_data), 200)
+
+    total_movies = movies.count_documents({})
+    return make_response(jsonify({
+        "results": movies_data,
+        "total_pages": utils.get_total_pages(total_movies, per_page),
+        "current_page": page_num,
+        "total_items": total_movies,
+        "per_page": per_page
+    }), 200)
 
 @movies_bp.route("/api/v1.0/movies/popular", methods=['GET'])
 def get_popular_movies():
@@ -132,13 +148,21 @@ def get_popular_movies():
            
     skip = (page_num - 1) * per_page
     movies_data = []
-    for movie in movies.find({"flags.is_popular": True}).skip(skip).limit(per_page):
+    filters = {"flags.is_popular": True}
+    for movie in movies.find(filters).skip(skip).limit(per_page):
         movie["_id"] = str(movie["_id"])
         for review in movie.get("reviews", []):
             review["_id"] = str(review["_id"])
         movies_data.append(movie)
-           
-    return make_response(jsonify(movies_data), 200)
+
+    total_movies = movies.count_documents(filters)
+    return make_response(jsonify({
+        "results": movies_data,
+        "total_pages": utils.get_total_pages(total_movies, per_page),
+        "current_page": page_num,
+        "total_items": total_movies,
+        "per_page": per_page
+    }), 200)
 
 @movies_bp.route("/api/v1.0/movies/has-reviews", methods=['GET'])
 def get_movies_with_reviews():
@@ -152,27 +176,44 @@ def get_movies_with_reviews():
            
     skip = (page_num - 1) * per_page
     movies_data = []
-    for movie in movies.find({"flags.has_reviews": True}).skip(skip).limit(per_page):
+    filters = {"flags.has_reviews": True}
+    for movie in movies.find(filters).skip(skip).limit(per_page):
         movie["_id"] = str(movie["_id"])
         for review in movie.get("reviews", []):
             review["_id"] = str(review["_id"])
         movies_data.append(movie)
-           
-    return make_response(jsonify(movies_data), 200)
 
-@movies_bp.route("/api/v1.0/movies/<string:id>", methods=['GET'])
-def show_one_movie(id):
-    if utils.is_valid_object_id(id):
-        movie = movies.find_one({'_id': ObjectId(id)})
-        if movie is not None:
-            movie['_id'] = str(movie['_id'])
-            for review in movie['reviews']:
-                review['_id'] = str(review['_id'])
-            return make_response(jsonify(movie), 200)
-        else: 
-            return make_response(jsonify({"error" : "No movie found"}), 404)
-    else:
-        return make_response(jsonify({"error" : "Invalid ID"}), 400)
+    total_movies = movies.count_documents(filters)
+    return make_response(jsonify({
+        "results": movies_data,
+        "total_pages": utils.get_total_pages(total_movies, per_page),
+        "current_page": page_num,
+        "total_items": total_movies,
+        "per_page": per_page
+    }), 200)
+
+@movies_bp.route("/api/v1.0/movies/<string:title>", methods=['GET'])
+def show_one_movie(title):
+    title = title.strip()
+
+    if not title:
+        return make_response(jsonify({"error": "Title cannot be empty"}), 400)
+    
+    title_pattern = re.compile(
+        f"^{re.escape(title)}$",
+        re.IGNORECASE
+    ) 
+    movie = movies.find_one({'title': title_pattern})
+
+    if movie is None:
+        return make_response(jsonify({"error": "Movie not found"}), 404)
+
+    movie['_id'] = str(movie['_id'])
+    for review in movie['reviews']:
+         review['_id'] = str(review['_id'])
+
+    return make_response(jsonify(movie), 200)
+
 
 
 @movies_bp.route("/api/v1.0/movies", methods=['POST'])

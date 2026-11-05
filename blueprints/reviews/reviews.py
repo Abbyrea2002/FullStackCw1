@@ -9,6 +9,10 @@ import validators
 reviews_bp = Blueprint("reviews_bp", __name__)
 
 movies = globals.db.movies
+
+def can_manage_review(user, review_user_id):
+   return user["admin"] or user["_id"] == review_user_id
+
 @reviews_bp.route("/api/v1.0/movies/<string:id>/reviews", methods=["POST"])
 @jwt_required
 def add_review(id):
@@ -65,11 +69,17 @@ def get_all_reviews(id):
     if not utils.is_valid_object_id(id):
         return make_response(jsonify({"error": "Invalid movie ID"}), 400)
 
-    if movies.count_documents({"_id": ObjectId(id)}) == 0:
+    movie_id = ObjectId(id)
+    movie = movies.find_one({"_id": movie_id}, {"reviews": 1})
+    if movie is None:
         return make_response(jsonify({"error": "No movie found"}), 404)
+
+    total_reviews = len(movie.get("reviews", []))
+
     skip = (page_num - 1) * per_page
+
     pipeline = [
-           {"$match": {"_id": ObjectId(id)}},
+           {"$match": {"_id": movie_id}},
            {"$project": {"reviews": 1}},
            {"$unwind": "$reviews"},
            {"$skip": skip},
@@ -85,7 +95,13 @@ def get_all_reviews(id):
     ]
 
     review_data = list(movies.aggregate(pipeline))
-    return make_response(jsonify(review_data), 200)
+    return make_response(jsonify({
+        "results": review_data,
+        "total_pages": utils.get_total_pages(total_reviews, per_page),
+        "current_page": page_num,
+        "total_items": total_reviews,
+        "per_page": per_page
+    }), 200)
         
 @reviews_bp.route("/api/v1.0/movies/<string:mid>/reviews/<string:rid>", methods=["GET"])
 def get_review(mid, rid):
@@ -158,18 +174,36 @@ def get_movie_review_stats(id):
 
 @reviews_bp.route("/api/v1.0/movies/<string:mid>/reviews/<string:rid>", methods=["PATCH"])
 @jwt_required
-@admin_required
 def edit_review(mid, rid):
     if utils.is_valid_object_id(mid):
            movie_id = ObjectId(mid)
+
            movie = movies.find_one({"_id" : movie_id})
+
            if movie is None:
                return make_response(jsonify({"error" : "No movie found"}), 404)
            
            if utils.is_valid_object_id(rid):
                review_id = ObjectId(rid)
-               if not any(review["_id"] == review_id for review in movie["reviews"]):
-                   return make_response(jsonify({"error" : "No review found"}), 404)
+
+               review = next(
+                   (review for review in movie["reviews"] if review["_id"] == review_id),
+                   None
+                )
+               if review is None:
+                    return make_response(jsonify({"error" : "No review found"}), 404)
+
+               token = request.headers.get('x-access-token')
+               decoded_token = jwt.decode(token, globals.secret_key, algorithms=["HS256"])
+               logged_in_user = decoded_token.get('user')
+
+               user = globals.db.users.find_one({"username": logged_in_user})
+               
+               if user is None:
+                   return make_response(jsonify({"error" : "User not found"}), 404)
+               
+               if not can_manage_review(user, review["user_id"]):
+                   return make_response(jsonify({"error" : "Unauthorized to edit this review"}), 403)
 
                data = request.get_json(silent=True)
 
@@ -181,7 +215,6 @@ def edit_review(mid, rid):
                    return make_response(jsonify({"error": "Invalid review fields", "fields": invalid_review_fields}), 400)
 
                allowed_fields = [
-                       "name",
                        "comment",
                        "stars"
                    ]
@@ -202,12 +235,10 @@ def edit_review(mid, rid):
                    f"reviews.$.{field}": value
                    for field, value in data.items()
                }
-               result = movies.update_one(
+               movies.update_one(
                    {"_id": movie_id, "reviews._id": review_id},
                    {"$set": update_fields}
                )
-               if result.matched_count == 0:
-                   return make_response(jsonify({"error": "No review found"}), 404)
 
                edited_review_url = "http://localhost:5000/api/v1.0/movies/" + mid + "/reviews/" + rid
         
@@ -219,7 +250,6 @@ def edit_review(mid, rid):
     
 @reviews_bp.route("/api/v1.0/movies/<string:mid>/reviews/<string:rid>", methods=["DELETE"])
 @jwt_required
-@admin_required
 def delete_review(mid, rid):
     if utils.is_valid_object_id(mid):
        movie_id = ObjectId(mid)
@@ -229,9 +259,27 @@ def delete_review(mid, rid):
        
        if utils.is_valid_object_id(rid):
            review_id = ObjectId(rid)
-           if not any(review["_id"] == review_id for review in movie["reviews"]):
-               return make_response(jsonify({"error" : "No review found"}), 404)
-           result = movies.update_one(
+
+           review = next(
+                           (review for review in movie["reviews"] if review["_id"] == review_id),
+                           None
+                        )
+           if review is None:
+                return make_response(jsonify({"error" : "No review found"}), 404)
+        
+           token = request.headers.get('x-access-token')
+           decoded_token = jwt.decode(token, globals.secret_key, algorithms=["HS256"])
+           logged_in_user = decoded_token.get('user')
+        
+           user = globals.db.users.find_one({"username": logged_in_user})
+                       
+           if user is None:
+                return make_response(jsonify({"error" : "User not found"}), 404)
+                       
+           if not can_manage_review(user, review["user_id"]):
+                return make_response(jsonify({"error" : "Unauthorized to delete this review"}), 403)
+         
+           movies.update_one(
                {"_id" : movie_id, "reviews._id" : review_id},
                {"$pull" : {"reviews" : {"_id" : review_id}}}
            )

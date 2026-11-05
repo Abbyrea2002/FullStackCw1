@@ -16,3 +16,10 @@ def get_pagination(args):
         return None
 
     return page_num, per_page
+
+
+def get_total_pages(total_items, per_page):
+    total_pages = total_items // per_page
+    if total_items % per_page:
+        total_pages += 1
+    return total_pages
