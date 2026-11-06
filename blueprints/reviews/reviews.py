@@ -25,7 +25,14 @@ def add_review(id):
     invalid_review_fields = validator.get_invalid_review_fields(data)
     if invalid_review_fields:
         return make_response(jsonify({"error": "Invalid review fields", "fields": invalid_review_fields}), 400)
-
+    missing_fields = []
+    required_fields = ["comment", "stars"]
+    for field in required_fields:
+        if field not in data:
+            missing_fields.append(field)
+    if missing_fields:
+        return make_response(jsonify({"error": "Missing fields", "fields": missing_fields}), 400)
+    
     comment = data["comment"]
     stars = data["stars"]
     
@@ -204,7 +211,7 @@ def edit_review(mid, rid):
                user = globals.db.users.find_one({"username": logged_in_user})
                
                if user is None:
-                   return make_response(jsonify({"error" : "User not found"}), 404)
+                   return make_response(jsonify({"error" : "Authenticated user not found"}), 404)
                
                if not can_manage_review(user, review["user_id"]):
                    return make_response(jsonify({"error" : "Unauthorized to edit this review"}), 403)
@@ -214,27 +221,21 @@ def edit_review(mid, rid):
                if not isinstance(data, dict) or not data:
                        return make_response(jsonify({"error": "Request body must be a JSON object"}), 400)
 
-               invalid_review_fields = validator.get_invalid_review_fields(data)
-               if invalid_review_fields:
-                   return make_response(jsonify({"error": "Invalid review fields", "fields": invalid_review_fields}), 400)
-
-               allowed_fields = [
-                       "comment",
-                       "stars"
-                   ]
-               
+               allowed_fields = ["comment", "stars"]
                invalid_fields = []
-
+               
                for field in data:
-                   if field not in allowed_fields:
-                       invalid_fields.append(field)
-
+                    if field not in allowed_fields:
+                        invalid_fields.append(field)
+               
                if invalid_fields:
-                   return make_response(jsonify({
-                       "error": "Fields cannot be updated",
-                       "fields": invalid_fields
-                   }), 400)
-                       
+                    return make_response(jsonify({"error": "Fields cannot be updated", "fields": invalid_fields}), 400)
+               
+
+               invalid_value_review_fields = validator.get_invalid_review_fields(data)
+               if invalid_value_review_fields:
+                   return make_response(jsonify({"error": "Invalid value in review fields", "fields": invalid_value_review_fields}), 400)
+                                  
                update_fields = {
                    f"reviews.$.{field}": value
                    for field, value in data.items()
@@ -278,7 +279,7 @@ def delete_review(mid, rid):
            user = globals.db.users.find_one({"username": logged_in_user})
                        
            if user is None:
-                return make_response(jsonify({"error" : "User not found"}), 404)
+                return make_response(jsonify({"error" : "Authenticated user not found"}), 404)
                        
            if not can_manage_review(user, review["user_id"]):
                 return make_response(jsonify({"error" : "Unauthorized to delete this review"}), 403)
